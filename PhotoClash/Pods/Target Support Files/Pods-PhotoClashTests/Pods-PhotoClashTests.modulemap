@@ -1,0 +1,6 @@
+framework module Pods_PhotoClashTests {
+  umbrella header "Pods-PhotoClashTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

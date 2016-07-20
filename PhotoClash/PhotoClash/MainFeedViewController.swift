@@ -14,6 +14,7 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
+        tabBarController?.tabBar.tintColor = UIColor.orangeColor()
         super.viewDidLoad()
         tableView.allowsSelection = false
         tableView.delegate = self

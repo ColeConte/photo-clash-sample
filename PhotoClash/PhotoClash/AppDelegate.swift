@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager!.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager!.requestWhenInUseAuthorization()
         locationManager!.startUpdatingLocation()
+    
         return true
     }
 

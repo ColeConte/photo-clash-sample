@@ -1,0 +1,10 @@
+PODS:
+  - Fusuma (0.5.1)
+
+DEPENDENCIES:
+  - Fusuma
+
+SPEC CHECKSUMS:
+  Fusuma: b6b727aabfbf3fd40419393aa25959910d6598d1
+
+COCOAPODS: 0.39.0
