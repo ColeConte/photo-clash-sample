@@ -493,7 +493,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="560" height="232"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5star.png" translatesAutoresizingMaskIntoConstraints="NO" id="QUm-jG-pwW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5star.png" translatesAutoresizingMaskIntoConstraints="NO" id="QUm-jG-pwW">
                                 <rect key="frame" x="186" y="93" width="188" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QUm-jG-pwW" secondAttribute="height" multiplier="4:1" id="rQe-MF-YW8"/>
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsC-Lc-6r7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3566" y="1772"/>
+            <point key="canvasLocation" x="3556" y="1808"/>
         </scene>
         <!--My Location Container View Controller-->
         <scene sceneID="eZK-Cu-KI3">
@@ -555,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obh-Ho-fLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2810" y="1772"/>
+            <point key="canvasLocation" x="2810" y="1808"/>
         </scene>
         <!--Edit Photo View Controller-->
         <scene sceneID="kwR-ko-Lqd">
@@ -659,12 +659,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNa-Je-aac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2213" y="1800"/>
+            <point key="canvasLocation" x="2083" y="1808"/>
         </scene>
         <!--Fusuma View Controller-->
         <scene sceneID="vBF-2x-6lu">
             <objects>
                 <viewController id="o9m-sy-vbd" customClass="FusumaViewController" customModule="Fusuma" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DQp-4y-Ddh"/>
+                        <viewControllerLayoutGuide type="bottom" id="XaX-wy-BbE"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Eq-Le-pbg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

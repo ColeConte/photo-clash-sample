@@ -12,6 +12,7 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var hotLocalSegmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    var clashes = [FinishedClash(user1: "Cole Conte", user2: "Trevor Kunz", profPic1: "noUser.jpg", profPic2: "noUser.jpg", pic1Pct: 60, pic2Pct: 40, pic1: "5star.png", pic2: "noUser.jpg"), CurrentClash(user1: "Cole Conte", user2: "Trevor Kunz", profPic1: "noUser.jpg", profPic2: "noUser.jpg", pic1Pct: 60, pic2Pct: 40, pic1: "5star.png", pic2: "noUser.jpg", startTime: NSDate())]
 
     override func viewDidLoad() {
         tabBarController?.tabBar.tintColor = UIColor.orangeColor()
@@ -22,20 +23,45 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
     }
 
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if let theCell = cell as? FinishedClashTableViewCell{
+            let theClash = clashes[indexPath.row] as! FinishedClash
+            theCell.image1.image = theClash.pic1
+            theCell.image2.image = theClash.pic2
+            theCell.profilePic.image = theClash.profPic1
+            theCell.votePercentage.text = String(theClash.pic1Pct) + "%"
+            theCell.userName.text = theClash.user1
+            theCell.finishedClash = theClash
+            theCell.scrollView.delegate = theCell
+            theCell.scrollView.pagingEnabled = true
+        }
+        else{
+            let theCell = cell as! CurrentClashTableViewCell
+            let theClash = clashes[indexPath.row] as! CurrentClash
+            theCell.image1.image = theClash.pic1
+            theCell.image2.image = theClash.pic2
+            theCell.currentClash = theClash
+            theCell.scrollView.delegate = theCell
+            theCell.scrollView.pagingEnabled = true
+            
+        }
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FinishedClashCell") as! FinishedClashTableViewCell
-        cell.image1.image = UIImage(named: "5star.png")
-        cell.image2.image = UIImage(named: "noUser.jpg")
-        cell.scrollView.delegate = cell
-        cell.scrollView.pagingEnabled = true
-        return cell
+        if let _ = clashes[indexPath.row] as? FinishedClash{
+            let cell = tableView.dequeueReusableCellWithIdentifier("FinishedClashCell") as! FinishedClashTableViewCell
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCellWithIdentifier("CurrentClashCell") as! CurrentClashTableViewCell
+            return cell
+        }
     }
     
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //todo
-        return 1
+        return clashes.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

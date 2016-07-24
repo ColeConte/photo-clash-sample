@@ -12,9 +12,17 @@ class ClashpointsContainerViewController: UIViewController {
 
     @IBOutlet weak var clashPoints: UILabel!
     @IBOutlet weak var clashPointsStars: UIImageView!
+    
+    override func viewWillLayoutSubviews() {
+        print (clashPointsStars.frame.width)
+        clashPointsStars.clipsToBounds = true
+        clashPointsStars.frame = CGRectMake(clashPointsStars.frame.minX,clashPointsStars.frame.minY, 0.5 * clashPointsStars.frame.width, clashPointsStars.frame.height)
+        print (clashPointsStars.frame.width)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 

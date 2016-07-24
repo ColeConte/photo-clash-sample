@@ -17,6 +17,17 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
     @IBOutlet weak var timeRemaining: UILabel!
     @IBOutlet weak var heart: UILabel!
     @IBOutlet weak var heart2: UILabel!
+    var currentClash: CurrentClash!{
+        didSet{
+            //off by one second
+            let oneDay: NSTimeInterval = 60.0*60.0*24.0
+            let currentTime = NSDate()
+            timerCounter = currentClash.startTime.dateByAddingTimeInterval(oneDay).timeIntervalSinceDate(currentTime)
+            timeRemaining.text = stringFromTimeInterval(timerCounter!)
+            startTimer()
+        }
+    }
+    var timerCounter: NSTimeInterval?
     
     
     override func awakeFromNib() {
@@ -24,7 +35,6 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
         tap.numberOfTapsRequired = 2
         self.addGestureRecognizer(tap)
         super.awakeFromNib()
-        
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -52,6 +62,30 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
                 
                 theHeart!.hidden = true
         })
+    }
+    
+    func stringFromTimeInterval(interval: NSTimeInterval) -> String {
+        let interval = Int(interval)
+        let seconds = interval % 60
+        let minutes = (interval / 60) % 60
+        let hours = (interval / 3600)
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+    
+    func startTimer() {
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(CurrentClashTableViewCell.onTimer(_:)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func onTimer(timer:NSTimer!) {
+        // Here is the string containing the timer
+        // Update your label here
+        if timerCounter == 0.0{
+            //make this better
+            timeRemaining.text = "00:00:00!!!"
+            self.userInteractionEnabled = false
+        }
+        timeRemaining.text = stringFromTimeInterval(timerCounter!)
+        timerCounter! -= 1
     }
     
 }

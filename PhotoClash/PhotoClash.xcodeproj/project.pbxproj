@@ -17,6 +17,9 @@
 		0E198A961D380ADB00F25F53 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E198A951D380ADB00F25F53 /* CoreLocation.framework */; };
 		0E198A981D38181300F25F53 /* noUser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E198A971D38181300F25F53 /* noUser.jpg */; };
 		0E198A9A1D381B8B00F25F53 /* NotificationsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E198A991D381B8B00F25F53 /* NotificationsContainerViewController.swift */; };
+		0E352C341D4299F3005CD054 /* FinishedClash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E352C331D4299F3005CD054 /* FinishedClash.swift */; };
+		0E352C361D42A2A1005CD054 /* CurrentClash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E352C351D42A2A1005CD054 /* CurrentClash.swift */; };
+		0E352C3A1D456B60005CD054 /* TextImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E352C391D456B60005CD054 /* TextImageView.swift */; };
 		0EB57ECC1CF778AD00E30272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */; };
 		0EB57ED11CF778AD00E30272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB57ECF1CF778AD00E30272 /* Main.storyboard */; };
 		0EB57ED31CF778AD00E30272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB57ED21CF778AD00E30272 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		0E198A951D380ADB00F25F53 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0E198A971D38181300F25F53 /* noUser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = noUser.jpg; path = ../../../../Desktop/noUser.jpg; sourceTree = "<group>"; };
 		0E198A991D381B8B00F25F53 /* NotificationsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsContainerViewController.swift; sourceTree = "<group>"; };
+		0E352C331D4299F3005CD054 /* FinishedClash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedClash.swift; sourceTree = "<group>"; };
+		0E352C351D42A2A1005CD054 /* CurrentClash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentClash.swift; sourceTree = "<group>"; };
+		0E352C391D456B60005CD054 /* TextImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextImageView.swift; sourceTree = "<group>"; };
 		0EB57EC81CF778AD00E30272 /* PhotoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB57ED01CF778AD00E30272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,12 +149,15 @@
 				0E031DF21D3EE56E00EA9AE4 /* EditPhotoViewController.swift */,
 				0E031DF01D3EDF5A00EA9AE4 /* FusumaContainerViewController.swift */,
 				0EBD511B1D384E140006C125 /* FinishedClashTableViewCell.swift */,
+				0E352C331D4299F3005CD054 /* FinishedClash.swift */,
+				0E352C351D42A2A1005CD054 /* CurrentClash.swift */,
 				0EBD51191D3830480006C125 /* CurrentClashTableViewCell.swift */,
 				0EEE6ED71D38262E00B0094E /* MainFeedViewController.swift */,
 				0E198A931D37FE0600F25F53 /* MyLocationContainerViewController.swift */,
 				0E198A911D37FAB400F25F53 /* ClashpointsContainerViewController.swift */,
 				0E198A991D381B8B00F25F53 /* NotificationsContainerViewController.swift */,
 				0E198A8D1D37E87B00F25F53 /* MyProfileViewController.swift */,
+				0E352C391D456B60005CD054 /* TextImageView.swift */,
 				0EB57ED21CF778AD00E30272 /* Assets.xcassets */,
 				0EB57ED41CF778AD00E30272 /* LaunchScreen.storyboard */,
 				0EB57ED71CF778AD00E30272 /* Info.plist */,
@@ -372,15 +381,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E198A8E1D37E87B00F25F53 /* MyProfileViewController.swift in Sources */,
+				0E352C341D4299F3005CD054 /* FinishedClash.swift in Sources */,
 				0E031DF31D3EE56E00EA9AE4 /* EditPhotoViewController.swift in Sources */,
 				0E198A921D37FAB400F25F53 /* ClashpointsContainerViewController.swift in Sources */,
 				0E031DF11D3EDF5A00EA9AE4 /* FusumaContainerViewController.swift in Sources */,
 				0E198A941D37FE0600F25F53 /* MyLocationContainerViewController.swift in Sources */,
+				0E352C3A1D456B60005CD054 /* TextImageView.swift in Sources */,
 				0EBD511A1D3830480006C125 /* CurrentClashTableViewCell.swift in Sources */,
 				0EEE6ED81D38262E00B0094E /* MainFeedViewController.swift in Sources */,
 				0EB57ECC1CF778AD00E30272 /* AppDelegate.swift in Sources */,
 				0EBD511C1D384E140006C125 /* FinishedClashTableViewCell.swift in Sources */,
 				0E198A9A1D381B8B00F25F53 /* NotificationsContainerViewController.swift in Sources */,
+				0E352C361D42A2A1005CD054 /* CurrentClash.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

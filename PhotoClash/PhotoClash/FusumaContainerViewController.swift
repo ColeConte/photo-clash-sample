@@ -41,12 +41,11 @@ class FusumaContainerViewController: UIViewController, FusumaDelegate{
     // Return the image which is selected from camera roll or is taken via the camera.
     func fusumaImageSelected(image: UIImage) {
         photoToEdit = image
-        
+        performSegueWithIdentifier("ToEditPhoto", sender: nil)
     }
     
     // Return the image but called after is dismissed.
     func fusumaDismissedWithImage(image: UIImage) {
-        performSegueWithIdentifier("ToEditPhoto", sender: nil)
     }
     
     func fusumaVideoCompleted(withFileURL fileURL: NSURL) {
