@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-class EditPhotoViewController: UIViewController {
+class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var photo: UIImageView!
     @IBAction func backButtonPress() {
         dismissViewControllerAnimated(false, completion: nil)
@@ -19,14 +19,13 @@ class EditPhotoViewController: UIViewController {
     var inTextField: Bool = false
     var textWriteLocation: CGPoint?
     var textField: UITextField?
+    var previousTextTapped: TextImageView?
+    var inPreviousText = false
     let swipeRightRec = UISwipeGestureRecognizer()
     let swipeLeftRec = UISwipeGestureRecognizer()
     let tapRec = UITapGestureRecognizer()
-    let textTapRec = UITapGestureRecognizer()
-    let dragRec = UIPanGestureRecognizer()
     var curFilter = -1
     let filters: [CIFilter?] = [CIFilter(name: "CIPhotoEffectChrome"), CIFilter(name: "CIColorMatrix"), CIFilter(name: "CIPhotoEffectTonal"), CIFilter(name: "CIPhotoEffectTransfer")]
-
 
     
     override func viewDidLoad() {
@@ -42,8 +41,6 @@ class EditPhotoViewController: UIViewController {
         swipeLeftRec.direction = .Left
         swipeLeftRec.addTarget(self, action: #selector(EditPhotoViewController.swipedViewLeft))
         tapRec.addTarget(self, action: #selector(EditPhotoViewController.tappedImage))
-        dragRec.addTarget(self, action: #selector(EditPhotoViewController.draggedText))
-        textTapRec.addTarget(self, action: #selector(EditPhotoViewController.tappedText))
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(EditPhotoViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         photo.addGestureRecognizer(swipeRightRec)
         photo.addGestureRecognizer(swipeLeftRec)
@@ -55,19 +52,45 @@ class EditPhotoViewController: UIViewController {
 
     }
     
+    
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
-    func draggedText(sender: AnyObject){
-        let imageView = (sender as! UIPanGestureRecognizer).view as! TextImageView
-        let finalLocation = sender.locationInView(view)
-        imageView.frame = CGRectMake(finalLocation.x, finalLocation.y, imageView.frame.width, imageView.frame.height)
+    func pinchedText(sender: UIPinchGestureRecognizer){
+        let imageView = sender.view as! TextImageView
+        imageView.transform = CGAffineTransformScale(imageView.transform, sender.scale, sender.scale)
+        sender.scale = 1
     }
     
-    func tappedText(sender: AnyObject){
-        let tapRecognizer = sender as! UITapGestureRecognizer
-        let imageView = tapRecognizer.view as! TextImageView
+    func rotatedText(sender: UIRotationGestureRecognizer){
+        let imageView = sender.view as! TextImageView
+        imageView.transform = CGAffineTransformRotate(imageView.transform, sender.rotation)
+        sender.rotation = 0
+    }
+    
+    func draggedText(sender: UIPanGestureRecognizer){
+        let imageView = sender.view as! TextImageView
+        //imageView.transform = CGAffineTransformMakeTranslation(sender.translationInView(imageView).x, sender.translationInView(imageView).y)
+        imageView.transform = CGAffineTransformMakeTranslation(sender.translationInView(imageView).x, sender.translationInView(imageView).y)
+        //imageView.transform = CGAffineTransformTranslate(imageView.transform, sender.translationInView(imageView).x, sender.translationInView(imageView).y)
+        //let finalLocation = sender.locationInView(view)
+        //imageView.frame = CGRectMake(finalLocation.x, finalLocation.y, imageView.frame.width, imageView.frame.height)
+    }
+    
+    func tappedText(sender: UITapGestureRecognizer){
+        if inPreviousText{
+            view.addSubview(previousTextTapped!)
+            inPreviousText = false
+        }
+        let imageView = sender.view as! TextImageView
+        previousTextTapped = imageView
+        inPreviousText = true
         textWriteLocation = CGPoint(x: imageView.frame.minX, y: imageView.frame.minY)
         imageView.removeFromSuperview()
         //how to delete?
@@ -80,18 +103,31 @@ class EditPhotoViewController: UIViewController {
     func tappedImage(){
         if inTextField{
             textField!.resignFirstResponder()
+            inPreviousText = false
             if textField!.text != ""{
                 let text = textField!.text
                 textField!.text = ""
-                textField!.frame = CGRectMake(0, view.frame.height/2, view.frame.width, 40)
+                textField!.frame = CGRectMake(0, view.frame.height/2, view.frame.width, 30)
                 let textImage = textToImage(text!)
                 let textImageView = TextImageView(frame: CGRectMake(textWriteLocation!.x, textWriteLocation!.y, textImage.size.width, textImage.size.height))
                 textImageView.image = textImage
                 textImageView.text = text
                 view.addSubview(textImageView)
                 textImageView.userInteractionEnabled = true
+                let dragRec = UIPanGestureRecognizer()
+                dragRec.maximumNumberOfTouches = 1
+                dragRec.minimumNumberOfTouches = 1
+                dragRec.addTarget(self, action: #selector(EditPhotoViewController.draggedText))
                 textImageView.addGestureRecognizer(dragRec)
+                let textTapRec = UITapGestureRecognizer()
+                textTapRec.addTarget(self, action: #selector(EditPhotoViewController.tappedText))
                 textImageView.addGestureRecognizer(textTapRec)
+                let textPinchRec = UIPinchGestureRecognizer()
+                textPinchRec.addTarget(self, action: #selector(EditPhotoViewController.pinchedText))
+                textImageView.addGestureRecognizer(textPinchRec)
+                let textRotateRec = UIRotationGestureRecognizer()
+                textRotateRec.addTarget(self, action: #selector(EditPhotoViewController.rotatedText))
+                textImageView.addGestureRecognizer(textRotateRec)
                 view.bringSubviewToFront(textImageView)
             }
             textField!.removeFromSuperview()
@@ -111,8 +147,8 @@ class EditPhotoViewController: UIViewController {
     func textToImage(drawText: NSString)->UIImage{
         let paragraphStyle = NSMutableParagraphStyle()
         let attrs = [NSFontAttributeName: UIFont(name: "Helvetica Bold", size: 36)!, NSParagraphStyleAttributeName: paragraphStyle, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        let width = (NSAttributedString(string: drawText as String, attributes: attrs).widthWithConstrainedHeight(30))
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: 40), false, 0)
+        let width = (NSAttributedString(string: drawText as String, attributes: attrs).widthWithConstrainedHeight(50))
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: 50), false, 0)
         let point = CGPoint(x: 0, y: 0)
         drawText.drawAtPoint(point, withAttributes: attrs)
         let img = UIGraphicsGetImageFromCurrentImageContext()
@@ -132,7 +168,9 @@ class EditPhotoViewController: UIViewController {
         
     }
     
+    
     func swipedViewRight(){
+        //add transition
         if curFilter == filters.count - 1{
             curFilter = -1
         }
@@ -148,7 +186,6 @@ class EditPhotoViewController: UIViewController {
                 let result = UIImage(CGImage: cgimgresult)
                 photo.image = result
             }
-                
             else {
                 print("image filtering failed")
             }
@@ -157,6 +194,7 @@ class EditPhotoViewController: UIViewController {
             photo.image = photoToEdit
         }
     }
+    
     func swipedViewLeft(){
         if curFilter == -1{
             curFilter = filters.count - 1
@@ -193,6 +231,8 @@ class EditPhotoViewController: UIViewController {
         }
         
     }
+
+    
     
 }
 

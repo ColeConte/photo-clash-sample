@@ -238,11 +238,10 @@ public final class FusumaViewController: UIViewController {
         return true
     }
     
-    @IBAction func closeButtonPressed(sender: UIButton) {
+     @IBAction func closeButtonPressed(sender: UIButton) {
+        self.delegate?.fusumaClosed?()
+        changeMode(Mode.Library)
         self.tabBarController?.selectedIndex = 0
-        self.dismissViewControllerAnimated(true, completion: {
-            self.delegate?.fusumaClosed?()
-        })
     }
     
     @IBAction func libraryButtonPressed(sender: UIButton) {
@@ -313,10 +312,7 @@ extension FusumaViewController: FSAlbumViewDelegate, FSCameraViewDelegate, FSVid
     func cameraShotFinished(image: UIImage) {
         
         delegate?.fusumaImageSelected(image)
-        self.dismissViewControllerAnimated(true, completion: {
-            
-            self.delegate?.fusumaDismissedWithImage?(image)
-        })
+        self.delegate?.fusumaDismissedWithImage?(image)
     }
     
     // MARK: FSAlbumViewDelegate

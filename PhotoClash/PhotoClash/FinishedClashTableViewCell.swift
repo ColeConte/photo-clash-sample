@@ -27,14 +27,14 @@ class FinishedClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
         pageControl.currentPage = page
         if page == 0{
             votePercentage.text = String(finishedClash.pic1Pct) + "%"
-            profilePic.image = finishedClash.profPic1
-            userName.text = finishedClash.user1
+            profilePic.image = finishedClash.user1.profilePicture
+            userName.text = finishedClash.user1.username
             votePercentage.textColor = UIColor.greenColor()
         }
         else{
             votePercentage.text = String(finishedClash.pic2Pct) + "%"
-            profilePic.image = finishedClash.profPic2
-            userName.text = finishedClash.user2
+            profilePic.image = finishedClash.user2.profilePicture
+            userName.text = finishedClash.user2.username
             votePercentage.textColor = UIColor.redColor()
         }
     }

@@ -12,6 +12,8 @@ class ClashpointsContainerViewController: UIViewController {
 
     @IBOutlet weak var clashPoints: UILabel!
     @IBOutlet weak var clashPointsStars: UIImageView!
+    var user: UserProfile?
+    
     
     override func viewWillLayoutSubviews() {
         print (clashPointsStars.frame.width)
@@ -22,6 +24,7 @@ class ClashpointsContainerViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        clashPoints.text = String(user?.clashpoints)
         
         // Do any additional setup after loading the view.
     }

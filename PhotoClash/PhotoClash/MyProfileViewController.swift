@@ -68,6 +68,8 @@ class MyProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profilePic.image = currentUser?.profilePicture
+        userName.text = currentUser?.username
         profilePic.layer.cornerRadius = profilePic.frame.size.height/4
         profilePic.clipsToBounds = true
         notificationsButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
@@ -77,10 +79,17 @@ class MyProfileViewController: UIViewController {
         locationContainerView.hidden = true
         clashpointsContainerView.hidden = true
 
-
-
-        // Do any additional setup after loading the view.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ClashpointsEmbed"{
+            if let clashpointsVC = segue.destinationViewController as? ClashpointsContainerViewController{
+                clashpointsVC.user = currentUser
+            }
+        }
+    }
+    
+
 
    
 }
