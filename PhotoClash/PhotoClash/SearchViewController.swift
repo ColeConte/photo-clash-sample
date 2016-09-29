@@ -60,7 +60,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         tagsBar.backgroundColor = UIColor.orangeColor()
     }
 
-    
+    //why?
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
@@ -100,15 +100,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     }
     
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.prepareUI()
-    }
     
-    // MARK: prepareVC
-    func prepareUI(){
-        //self.addRefreshControl()
-    }
     
     func tappedScreen(sender: UITapGestureRecognizer){
         view.endEditing(true)
@@ -169,8 +161,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
                 let button = UIButton(frame:frame)
                 button.setTitle("#" + tag, forState: .Normal)
                 button.setTitleColor(UIColor.blueColor(), forState: .Normal)
-                let newAlpha = CGFloat(filteredTags[tag]!) / CGFloat(maxHits)
+                let newAlpha = sqrt(CGFloat(filteredTags[tag]!) / CGFloat(maxHits))
                 button.alpha = newAlpha
+                if usersSelected{
+                    button.hidden = true
+                }
                 view.addSubview(button)
                 if CGFloat(startY + 50) > view.frame.height{
                     startX += 110
@@ -190,7 +185,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
 
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filteredUsers.count
     }
     
@@ -235,7 +230,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
                 let user = filteredUsers[selectedIndex!]
                 destination.user = user
                 destination.modalPresentationStyle = .Popover
-                destination.preferredContentSize = CGSizeMake(view.frame.width/2,view.frame.height/2)
+                destination.preferredContentSize = CGSizeMake(view.frame.width/2,view.frame.width/2)
+                //destination.view.layer.cornerRadius = destination.view.frame.width / 4
+                //destination.view.clipsToBounds = false
                 let popoverMenuViewController = destination.popoverPresentationController
                 popoverMenuViewController?.permittedArrowDirections = .Any
                 popoverMenuViewController?.delegate = destination

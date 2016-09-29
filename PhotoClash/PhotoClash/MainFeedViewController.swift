@@ -42,7 +42,8 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
         //test data
         let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 4 * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) {
-            self.clashes = [FinishedClash(user1: currentUser!, user2: currentUser!,  pic1Pct: 60, pic2Pct: 40, pic1: "5star.png", pic2: "noUser.jpg"), CurrentClash(user1: currentUser!, user2: currentUser!,  pic1Pct: 60, pic2Pct: 40, pic1: "5star.png", pic2: "noUser.jpg", startTime: NSDate())]
+            let user2 = UserProfile(username: "Montana DiPietrantoniofksdjaflkajdskfajsldk", profilePicture: UIImage(named: "noUser.jpg")!, previousClashes: [], clashpoints: 7, friends: [])
+            self.clashes = [FinishedClash(user1: currentUser!, user2: user2,  pic1Pct: 60, pic2Pct: 40, pic1: "5star.png", pic2: "noUser.jpg"), CurrentClash(user1: currentUser!, user2: currentUser!,  pic1Pct: 60, pic2Pct: 40, pic1: "5star.png", pic2: "noUser.jpg", startTime: NSDate())]
         }
     }
     

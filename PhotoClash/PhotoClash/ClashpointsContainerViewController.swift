@@ -24,9 +24,8 @@ class ClashpointsContainerViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        clashPoints.text = String(user?.clashpoints)
+        clashPoints.text = String(user!.clashpoints)
         
-        // Do any additional setup after loading the view.
     }
 
 }

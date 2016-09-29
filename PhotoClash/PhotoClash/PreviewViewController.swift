@@ -13,6 +13,7 @@ class PreviewViewController: UIViewController, UIPopoverPresentationControllerDe
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var connectionLabel: UILabel!
 
     
     var user: UserProfile?
@@ -22,6 +23,7 @@ class PreviewViewController: UIViewController, UIPopoverPresentationControllerDe
         super.viewDidLoad()
         imageView.image = user?.profilePicture
         name.text = user?.username
+        connectionLabel.text = "You and " + user!.username + " are friends on Facebook."
     }
     
     

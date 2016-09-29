@@ -37,10 +37,14 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 let image : UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)!
                 let name = strFirstName + " " + strLastName
                 currentUser = UserProfile(username: name, profilePicture: image, previousClashes: [], clashpoints: 0, friends: [])
-                self.performSegueWithIdentifier("ToTabBar", sender: nil)
+                self.friendsGraphRequest()
             }
         }
-        FBSDKGraphRequest.init(graphPath: "me/invitable_friends", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection,result,error) -> Void in
+    }
+    
+    
+    func friendsGraphRequest(){
+        FBSDKGraphRequest.init(graphPath: "me/taggable_friends", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection,result,error) -> Void in
             if error == nil{
                 let friendObjects = result.objectForKey("data") as! [NSDictionary]
                 for friend in friendObjects{
@@ -52,7 +56,9 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                     let friend = UserProfile(username: name, profilePicture: image, previousClashes: [], clashpoints: 0, friends: [])
                     facebookFriends += [friend]
                 }
+                self.performSegueWithIdentifier("ToTabBar", sender: nil)
             }
+            
         }
     }
     

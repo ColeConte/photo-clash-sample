@@ -76,11 +76,9 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func draggedText(sender: UIPanGestureRecognizer){
         let imageView = sender.view as! TextImageView
-        //imageView.transform = CGAffineTransformMakeTranslation(sender.translationInView(imageView).x, sender.translationInView(imageView).y)
         imageView.transform = CGAffineTransformMakeTranslation(sender.translationInView(imageView).x, sender.translationInView(imageView).y)
-        //imageView.transform = CGAffineTransformTranslate(imageView.transform, sender.translationInView(imageView).x, sender.translationInView(imageView).y)
-        //let finalLocation = sender.locationInView(view)
-        //imageView.frame = CGRectMake(finalLocation.x, finalLocation.y, imageView.frame.width, imageView.frame.height)
+        let finalLocation = sender.locationInView(view)
+        imageView.frame = CGRectMake(finalLocation.x, finalLocation.y, imageView.frame.width, imageView.frame.height)
     }
     
     func tappedText(sender: UITapGestureRecognizer){
@@ -109,7 +107,7 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
                 textField!.text = ""
                 textField!.frame = CGRectMake(0, view.frame.height/2, view.frame.width, 30)
                 let textImage = textToImage(text!)
-                let textImageView = TextImageView(frame: CGRectMake(textWriteLocation!.x, textWriteLocation!.y, textImage.size.width, textImage.size.height))
+                let textImageView = TextImageView(frame: CGRectMake(textWriteLocation!.x - textImage.size.width/2, textWriteLocation!.y - textImage.size.height/2, textImage.size.width, textImage.size.height))
                 textImageView.image = textImage
                 textImageView.text = text
                 view.addSubview(textImageView)
