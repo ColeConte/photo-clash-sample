@@ -999,18 +999,28 @@
                                     <action selector="backButtonPress" destination="gaR-r5-WiJ" eventType="touchUpInside" id="j2W-uI-2PN"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.1000000000000001" minValue="-0.10000000000000001" maxValue="1.1000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="le4-hQ-R8k">
+                                <rect key="frame" x="44" y="28" width="538" height="31"/>
+                                <connections>
+                                    <action selector="colorSliderValueChanged:" destination="gaR-r5-WiJ" eventType="valueChanged" id="6Iw-ve-bM4"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="le4-hQ-R8k" firstAttribute="top" secondItem="Z0g-Td-0LA" secondAttribute="bottom" constant="8" id="0XP-3M-BSb"/>
                             <constraint firstItem="JAH-bO-Hwi" firstAttribute="top" secondItem="Z0g-Td-0LA" secondAttribute="bottom" id="D19-yu-IvX"/>
                             <constraint firstItem="sd0-w1-0Qo" firstAttribute="top" secondItem="JAH-bO-Hwi" secondAttribute="bottom" id="NTf-vV-QZ3"/>
                             <constraint firstItem="JAH-bO-Hwi" firstAttribute="leading" secondItem="aaf-9o-gru" secondAttribute="leading" id="gIZ-5h-xTe"/>
                             <constraint firstItem="PAx-Hj-gdk" firstAttribute="leading" secondItem="aaf-9o-gru" secondAttribute="leading" constant="8" id="gJ7-3z-IZe"/>
                             <constraint firstItem="PAx-Hj-gdk" firstAttribute="top" secondItem="Z0g-Td-0LA" secondAttribute="bottom" constant="8" id="mJm-Lc-gDz"/>
+                            <constraint firstItem="le4-hQ-R8k" firstAttribute="leading" secondItem="PAx-Hj-gdk" secondAttribute="trailing" constant="8" id="nRp-hN-eAM"/>
+                            <constraint firstItem="le4-hQ-R8k" firstAttribute="trailing" secondItem="aaf-9o-gru" secondAttribute="trailingMargin" id="uj3-FQ-InE"/>
                             <constraint firstAttribute="trailing" secondItem="JAH-bO-Hwi" secondAttribute="trailing" id="vba-Nz-RfL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorSlider" destination="le4-hQ-R8k" id="WKX-Gu-dB3"/>
                         <outlet property="photo" destination="JAH-bO-Hwi" id="jcy-rg-Cpd"/>
                     </connections>
                 </viewController>

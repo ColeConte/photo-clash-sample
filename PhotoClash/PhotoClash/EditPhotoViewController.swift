@@ -11,9 +11,11 @@ import CoreImage
 
 class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var colorSlider: UISlider!
     @IBAction func backButtonPress() {
         dismissViewControllerAnimated(false, completion: nil)
     }
+    var color: UIColor = UIColor.whiteColor()
     var photoToEdit: UIImage?
     var coreImage: CIImage?
     var inTextField: Bool = false
@@ -27,9 +29,25 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     var curFilter = -1
     let filters: [CIFilter?] = [CIFilter(name: "CIPhotoEffectChrome"), CIFilter(name: "CIColorMatrix"), CIFilter(name: "CIPhotoEffectTonal"), CIFilter(name: "CIPhotoEffectTransfer")]
 
+    @IBAction func colorSliderValueChanged(sender: AnyObject) {
+        let value = colorSlider.value
+        if value < 1 && value > 0{
+            color = UIColor(hue: CGFloat(colorSlider.value), saturation: 1.0, brightness: 1.0, alpha: 1.0)
+        }
+        else if value < 0{
+            color = UIColor.blackColor()
+        }
+        else if value > 1{
+            color = UIColor.whiteColor()
+        }
+        if inTextField{
+            textField?.textColor = color
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorSlider.hidden = true
         photo.image = photoToEdit
         guard let image = photo.image, cgimg = image.CGImage else {
             print("imageView doesn't have an image!")
@@ -48,8 +66,7 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
         photo.userInteractionEnabled = true
         textField = UITextField(frame: CGRectMake(0, self.view.frame.height/2, self.view.frame.width, 30))
         textField!.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
-        textField!.textColor = UIColor.whiteColor()
-
+        textField?.textColor = UIColor.whiteColor()
     }
     
     
@@ -88,6 +105,7 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         let imageView = sender.view as! TextImageView
         previousTextTapped = imageView
+        colorSlider.hidden = false
         inPreviousText = true
         textWriteLocation = CGPoint(x: imageView.frame.minX, y: imageView.frame.minY)
         imageView.removeFromSuperview()
@@ -96,11 +114,13 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
         textField!.text = imageView.text
         self.view.addSubview(textField!)
         textField?.becomeFirstResponder()
+        textField?.textColor = color
     }
     
     func tappedImage(){
         if inTextField{
             textField!.resignFirstResponder()
+            colorSlider.hidden = true
             inPreviousText = false
             if textField!.text != ""{
                 let text = textField!.text
@@ -136,6 +156,7 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
         else{
             textWriteLocation = tapRec.locationInView(view)
             inTextField = true
+            colorSlider.hidden = false
             self.view.addSubview(textField!)
             textField!.becomeFirstResponder()
 
@@ -144,7 +165,7 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func textToImage(drawText: NSString)->UIImage{
         let paragraphStyle = NSMutableParagraphStyle()
-        let attrs = [NSFontAttributeName: UIFont(name: "Helvetica Bold", size: 36)!, NSParagraphStyleAttributeName: paragraphStyle, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let attrs = [NSFontAttributeName: UIFont(name: "Helvetica Bold", size: 36)!, NSParagraphStyleAttributeName: paragraphStyle, NSForegroundColorAttributeName: color]
         let width = (NSAttributedString(string: drawText as String, attributes: attrs).widthWithConstrainedHeight(50))
         UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: 50), false, 0)
         let point = CGPoint(x: 0, y: 0)
@@ -152,18 +173,6 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return img
-        /*
-        let scale = UIScreen.mainScreen().scale
-        UIGraphicsBeginImageContextWithOptions(inImage.size, false, scale)
-        let textFontAttributes = [
-            NSFontAttributeName: textFont,
-            NSForegroundColorAttributeName: textColor,
-            ]
-        inImage.drawInRect(CGRectMake(0, 0, inImage.size.width, inImage.size.height))
-                let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage*/
-        
     }
     
     
