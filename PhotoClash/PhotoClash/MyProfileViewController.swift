@@ -33,8 +33,6 @@ class MyProfileViewController: UIViewController {
         notificationsContainerView.hidden = false
         locationContainerView.hidden = true
         clashpointsContainerView.hidden = true
-
-
     }
     
     @IBAction func pressedMyLocationButton(sender: UIButton){
@@ -47,8 +45,6 @@ class MyProfileViewController: UIViewController {
         notificationsContainerView.hidden = true
         locationContainerView.hidden = false
         clashpointsContainerView.hidden = true
-
-
     }
     
     @IBAction func pressedClashpointsButton(sender: UIButton){
@@ -61,9 +57,6 @@ class MyProfileViewController: UIViewController {
         notificationsContainerView.hidden = true
         locationContainerView.hidden = true
         clashpointsContainerView.hidden = false
-
-
-
     }
     
     override func viewDidLoad() {

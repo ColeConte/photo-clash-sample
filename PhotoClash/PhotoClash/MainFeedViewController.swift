@@ -28,6 +28,15 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let indexPath = tableView.indexPathForSelectedRow
+        if indexPath != nil{
+            tableView.deselectRowAtIndexPath(indexPath!, animated: false)
+
+        }
+    }
+    
     override func viewDidLoad() {
         tabBarController?.tabBar.tintColor = UIColor.orangeColor()
         navigationController?.navigationBar.backgroundColor = UIColor.whiteColor()
@@ -40,10 +49,10 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         //test data
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 4 * Int64(NSEC_PER_SEC))
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 2 * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) {
-            let user2 = UserProfile(username: "Montana DiPietrantoniofksdjaflkajdskfajsldk", profilePicture: UIImage(named: "noUser.jpg")!, previousClashes: [], clashpoints: 7, friends: [])
-            self.clashes = [FinishedClash(user1: currentUser!, user2: user2,  pic1Pct: 60, pic2Pct: 40, pic1: "5star.png", pic2: "noUser.jpg"), CurrentClash(user1: currentUser!, user2: currentUser!,  pic1Pct: 60, pic2Pct: 40, pic1: "5star.png", pic2: "noUser.jpg", startTime: NSDate())]
+            let user2 = UserProfile(username: "Trevor Kunz", profilePicture: UIImage(named: "noUser.jpg")!, previousClashes: [], clashpoints: 7, friends: [])
+            self.clashes = [FinishedClash(user1: currentUser!, user2: user2,  pic1Pct: 60, pic2Pct: 40, pic1: "happybear.jpg", pic2: "polarbear.jpg"), CurrentClash(user1: currentUser!, user2: currentUser!,  pic1Pct: 60, pic2Pct: 40, pic1: "antelope.jpg", pic2: "penguins.jpg", startTime: NSDate())]
         }
     }
     

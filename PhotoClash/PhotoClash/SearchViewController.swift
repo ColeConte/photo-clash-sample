@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate {
+class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var suggestionsCollectionView: UICollectionView!
     lazy var searchBar: UISearchBar! = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
     
+    @IBOutlet weak var tagsTableView: UITableView!
     @IBOutlet weak var peopleButton: UIButton!
     @IBOutlet weak var tagsButton: UIButton!
     @IBOutlet weak var peopleBar: UIView!
@@ -20,8 +21,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     @IBOutlet weak var backBar: UIView!
     var users = [UserProfile]()
     var tags: [String:Int] = [:]
+    var sortedTags: [String] = []
     var filteredTags: [String:Int] = [:]
-    lazy var tagButtons: [UIButton] = []
     var filteredUsers = [UserProfile]()
     var presentingPopover: PreviewViewController?
     var userToPresent: UserProfile?
@@ -36,9 +37,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
     @IBAction func peopleButtonPress(sender: UIButton){
         usersSelected = true
-        for button in tagButtons{
-            button.hidden = true
-        }
+        tagsTableView.hidden = true
         suggestionsCollectionView.hidden = false
         suggestionsCollectionView.userInteractionEnabled = true
         peopleButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
@@ -49,9 +48,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
     @IBAction func tagsButtonPress(sender: UIButton){
         usersSelected = false
-        for button in tagButtons{
-            button.hidden = false
-        }
+        tagsTableView.hidden = false
         suggestionsCollectionView.hidden = true
         suggestionsCollectionView.userInteractionEnabled = false
         peopleButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
@@ -79,9 +76,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         tags = ["lit":6, "ootd": 10, "100likes": 2, "tbt": 1, "solit": 4, "fire": 3, "girlswholift": 1, "twerk":3, "blacktwitter":3, "finsta":3, "ootw":1, "hashtag":6, "abc":4, "leet":1, "dartboard":3, "basketball":1, "ballislife":12,"pig":2, "photoclash":3, "pc":2]
         filteredTags = tags
         addTagsToView()
-        for button in tagButtons{
-            button.hidden = true
-        }
+        tagsTableView.hidden = true
+        tagsTableView.delegate = self
+        tagsTableView.dataSource = self
         users = facebookFriends
         filteredUsers = users
         self.automaticallyAdjustsScrollViewInsets = false
@@ -142,51 +139,54 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
                 }
             }
             suggestionsCollectionView.reloadData()
-
             addTagsToView()
     }
     
     func addTagsToView(){
-        for button in tagButtons{
-            button.removeFromSuperview()
-        }
-        tagButtons = []
-        var startX = 20
-        var startY = Int(backBar.frame.maxY) + 8
-        let sortedTags = filteredTags.keysSortedByValue(>)
-        if sortedTags.count > 0 {
-            let maxHits = filteredTags[sortedTags[0]]!
-            for tag in sortedTags{
-                let frame = CGRect(x: startX, y: startY, width: 100, height: 30)
-                let button = UIButton(frame:frame)
-                button.setTitle("#" + tag, forState: .Normal)
-                button.setTitleColor(UIColor.blueColor(), forState: .Normal)
-                let newAlpha = sqrt(CGFloat(filteredTags[tag]!) / CGFloat(maxHits))
-                button.alpha = newAlpha
-                if usersSelected{
-                    button.hidden = true
-                }
-                view.addSubview(button)
-                if CGFloat(startY + 50) > view.frame.height{
-                    startX += 110
-                    startY = Int(backBar.frame.maxY) + 8
-                }
-                else{
-                    startY += 30
-                }
-                tagButtons += [button]
-            }
-        }
-
+        sortedTags = filteredTags.keysSortedByValue(>)
+        tagsTableView.reloadData()
     }
     
 
     
-    
-
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return filteredTags.count
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "#" + sortedTags[section]
+    }
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        header.textLabel?.textAlignment = .Center
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tagsTableView.dequeueReusableCellWithIdentifier("ImagesCell")! as! CollectionViewTableViewCell
+        cell.collectionView.delegate = self
+        cell.collectionView.dataSource = self
+        cell.collectionView.tag = indexPath.section
+        return cell
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return view.frame.width/3 // -1
+    }
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let label = UILabel()
+        label.text = "#" + sortedTags[section]
+        return label.frame.height + 8
+    }
     
      func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filteredUsers.count
+        if collectionView == suggestionsCollectionView{
+            return filteredUsers.count
+        }
+        else{
+            let tag = sortedTags[collectionView.tag]
+            return filteredTags[tag]!
+        }
+
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -194,14 +194,28 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        userToPresent = filteredUsers[indexPath.row]
-        performSegueWithIdentifier("ToUserProfile", sender: nil)
+        if collectionView == suggestionsCollectionView{
+            userToPresent = filteredUsers[indexPath.row]
+            performSegueWithIdentifier("ToUserProfile", sender: nil)
+        }
+        else{
+            //TODO
+        }
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:SuggestionCell = collectionView.dequeueReusableCellWithReuseIdentifier("SuggestionCell", forIndexPath: indexPath) as! SuggestionCell
-        cell.image.image = filteredUsers[indexPath.row].profilePicture
-        return cell
+        if collectionView == suggestionsCollectionView{
+            let cell:SuggestionCell = collectionView.dequeueReusableCellWithReuseIdentifier("SuggestionCell", forIndexPath: indexPath) as! SuggestionCell
+            cell.image.image = filteredUsers[indexPath.row].profilePicture
+            return cell
+        }
+        else{
+            let cell:ClashCell = collectionView.dequeueReusableCellWithReuseIdentifier("ClashCell", forIndexPath: indexPath) as! ClashCell
+            cell.image.image = UIImage(named: "polarbear.jpg")
+            return cell
+        }
+
+
     }
     
     

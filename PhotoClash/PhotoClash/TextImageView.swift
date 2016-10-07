@@ -10,4 +10,5 @@ import UIKit
 
 class TextImageView: UIImageView {
     var text: String?
+    var location: CGPoint?
 }

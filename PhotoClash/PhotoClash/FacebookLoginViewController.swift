@@ -56,6 +56,7 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                     let friend = UserProfile(username: name, profilePicture: image, previousClashes: [], clashpoints: 0, friends: [])
                     facebookFriends += [friend]
                 }
+                currentUser?.friends = facebookFriends
                 self.performSegueWithIdentifier("ToTabBar", sender: nil)
             }
             

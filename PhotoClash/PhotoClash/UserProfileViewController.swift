@@ -46,7 +46,6 @@ class UserProfileViewController: UIViewController {
         bar3.backgroundColor = UIColor.lightGrayColor()
         clashpointsContainerView.hidden = true
         friendsContainerView.hidden = false
-
     }
     
     @IBAction func pressedClashpointsButton(sender: UIButton){
@@ -58,13 +57,12 @@ class UserProfileViewController: UIViewController {
         bar1.backgroundColor = UIColor.lightGrayColor()
         clashpointsContainerView.hidden = false
         friendsContainerView.hidden = true
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         clashpointsContainerView.hidden = true
-        friendsContainerView.hidden = false
+        friendsContainerView.hidden = true
         profilePic.layer.cornerRadius = profilePic.frame.size.height/4
         profilePic.clipsToBounds = true
         profilePic.image = user?.profilePicture
@@ -73,7 +71,12 @@ class UserProfileViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ClashpointsEmbed"{
+        if segue.identifier == "FriendsEmbed"{
+            if let friendsVC = segue.destinationViewController as? FriendsTableViewController{
+                friendsVC.user = user
+            }
+        }
+        else if segue.identifier == "ClashpointsEmbed"{
             if let clashpointsVC = segue.destinationViewController as? ClashpointsContainerViewController{
                 clashpointsVC.user = user
             }

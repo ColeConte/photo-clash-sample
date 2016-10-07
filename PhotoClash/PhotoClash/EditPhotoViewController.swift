@@ -93,9 +93,13 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func draggedText(sender: UIPanGestureRecognizer){
         let imageView = sender.view as! TextImageView
+        //let translation = sender.translationInView(imageView)
+        //imageView.center = CGPointMake(imageView.location!.x + translation.x, imageView.location!.y + translation.y)
+        //imageView.location = imageView.center
         imageView.transform = CGAffineTransformMakeTranslation(sender.translationInView(imageView).x, sender.translationInView(imageView).y)
-        let finalLocation = sender.locationInView(view)
-        imageView.frame = CGRectMake(finalLocation.x, finalLocation.y, imageView.frame.width, imageView.frame.height)
+        //let finalLocation = imageView.locationInView(view)
+        //imageView.center = finalLocation
+        //imageView.frame = CGRectMake(finalLocation.x, finalLocation.y, imageView.frame.width, imageView.frame.height)
     }
     
     func tappedText(sender: UITapGestureRecognizer){
@@ -132,6 +136,7 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
                 textImageView.text = text
                 view.addSubview(textImageView)
                 textImageView.userInteractionEnabled = true
+                textImageView.location = textImageView.center
                 let dragRec = UIPanGestureRecognizer()
                 dragRec.maximumNumberOfTouches = 1
                 dragRec.minimumNumberOfTouches = 1

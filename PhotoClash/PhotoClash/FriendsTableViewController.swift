@@ -10,7 +10,7 @@ import UIKit
 
 class FriendsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var users = [UserProfile]()
+    var user: UserProfile?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,8 +22,7 @@ class FriendsTableViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //to implement
-        return 1
+        return user!.friends.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -36,8 +35,13 @@ class FriendsTableViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FriendCell")!
-        cell.textLabel?.text = "Sample Notification"
-        cell.detailTextLabel?.text = "1m"
+        let friend = user!.friends[indexPath.row]
+        cell.textLabel?.text = friend.username
+        cell.textLabel?.font = UIFont(name: "Futura Medium", size: 10.0)
+        cell.imageView?.image = friend.profilePicture
+//        if indexPath.row % 2 == 1{
+//            cell.backgroundColor = UIColor(red: 249.0/255.0, green: 207.0/255.0, blue: 99.0, alpha: 0.1)
+//        }
         return cell
     }
 

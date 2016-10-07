@@ -15,17 +15,18 @@ class ClashpointsContainerViewController: UIViewController {
     var user: UserProfile?
     
     
-    override func viewWillLayoutSubviews() {
-        print (clashPointsStars.frame.width)
-        clashPointsStars.clipsToBounds = true
-        clashPointsStars.frame = CGRectMake(clashPointsStars.frame.minX,clashPointsStars.frame.minY, 0.5 * clashPointsStars.frame.width, clashPointsStars.frame.height)
-        print (clashPointsStars.frame.width)
-
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         clashPoints.text = String(user!.clashpoints)
-        
+        let originalImage = clashPointsStars.image
+        let cgStars = originalImage?.CGImage
+        //plug in clashpoints math
+        let imageArea = CGRectMake(0, 0, 0.2 * (originalImage?.size.width)!, (originalImage?.size.height)!)
+        let subImage = CGImageCreateWithImageInRect(cgStars, imageArea)
+        let image = UIImage(CGImage: subImage!)
+        clashPointsStars.image = image
     }
+    
+
 
 }

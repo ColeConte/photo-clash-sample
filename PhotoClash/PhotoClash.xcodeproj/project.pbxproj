@@ -36,6 +36,8 @@
 		0E3BBCC51D7616C8004F90CC /* noUser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E3BBCC41D7616C8004F90CC /* noUser.jpg */; };
 		0E506A8F1D6F4D2500A6019E /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E506A8E1D6F4D2500A6019E /* UserProfileViewController.swift */; };
 		0E506A911D73612600A6019E /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E506A901D73612600A6019E /* FriendsTableViewController.swift */; };
+		0E76590A1DA8326000EABDB7 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */; };
+		0E76590C1DA8395300EABDB7 /* ClashCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76590B1DA8395300EABDB7 /* ClashCell.swift */; };
 		0EB57ECC1CF778AD00E30272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */; };
 		0EB57ED11CF778AD00E30272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB57ECF1CF778AD00E30272 /* Main.storyboard */; };
 		0EB57ED31CF778AD00E30272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB57ED21CF778AD00E30272 /* Assets.xcassets */; };
@@ -44,6 +46,10 @@
 		0EB57EEC1CF778AD00E30272 /* PhotoClashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB57EEB1CF778AD00E30272 /* PhotoClashUITests.swift */; };
 		0EBD511A1D3830480006C125 /* CurrentClashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD51191D3830480006C125 /* CurrentClashTableViewCell.swift */; };
 		0EBD511C1D384E140006C125 /* FinishedClashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD511B1D384E140006C125 /* FinishedClashTableViewCell.swift */; };
+		0ED8CF651D9EF15A00CBA3EF /* polarbear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8CF641D9EF15A00CBA3EF /* polarbear.jpg */; };
+		0ED8CF671D9EF16100CBA3EF /* penguins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8CF661D9EF16100CBA3EF /* penguins.jpg */; };
+		0ED8CF691D9EF16700CBA3EF /* happybear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8CF681D9EF16700CBA3EF /* happybear.jpg */; };
+		0ED8CF6B1D9EF16C00CBA3EF /* antelope.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8CF6A1D9EF16C00CBA3EF /* antelope.jpg */; };
 		0EE725E31D6544630040423F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE725E21D6544630040423F /* UserProfile.swift */; };
 		0EE725E51D6578A10040423F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE725E41D6578A10040423F /* SearchViewController.swift */; };
 		0EE725EB1D6CC9110040423F /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE725EA1D6CC9110040423F /* SuggestionCell.swift */; };
@@ -99,6 +105,8 @@
 		0E3BBCC41D7616C8004F90CC /* noUser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noUser.jpg; sourceTree = "<group>"; };
 		0E506A8E1D6F4D2500A6019E /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		0E506A901D73612600A6019E /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		0E76590B1DA8395300EABDB7 /* ClashCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClashCell.swift; sourceTree = "<group>"; };
 		0EB57EC81CF778AD00E30272 /* PhotoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB57ED01CF778AD00E30272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +121,10 @@
 		0EB57EED1CF778AD00E30272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EBD51191D3830480006C125 /* CurrentClashTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentClashTableViewCell.swift; sourceTree = "<group>"; };
 		0EBD511B1D384E140006C125 /* FinishedClashTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedClashTableViewCell.swift; sourceTree = "<group>"; };
+		0ED8CF641D9EF15A00CBA3EF /* polarbear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = polarbear.jpg; sourceTree = "<group>"; };
+		0ED8CF661D9EF16100CBA3EF /* penguins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = penguins.jpg; sourceTree = "<group>"; };
+		0ED8CF681D9EF16700CBA3EF /* happybear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = happybear.jpg; sourceTree = "<group>"; };
+		0ED8CF6A1D9EF16C00CBA3EF /* antelope.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = antelope.jpg; sourceTree = "<group>"; };
 		0EE725E21D6544630040423F /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		0EE725E41D6578A10040423F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0EE725EA1D6CC9110040423F /* SuggestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
@@ -200,6 +212,7 @@
 			children = (
 				0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */,
 				0EB57ECF1CF778AD00E30272 /* Main.storyboard */,
+				0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */,
 				0E506A901D73612600A6019E /* FriendsTableViewController.swift */,
 				0E0E109A1D627A8900A573CE /* FacebookLoginViewController.swift */,
 				0EEE6ED71D38262E00B0094E /* MainFeedViewController.swift */,
@@ -216,6 +229,7 @@
 				0EBD51191D3830480006C125 /* CurrentClashTableViewCell.swift */,
 				0EBD511B1D384E140006C125 /* FinishedClashTableViewCell.swift */,
 				0EE725EA1D6CC9110040423F /* SuggestionCell.swift */,
+				0E76590B1DA8395300EABDB7 /* ClashCell.swift */,
 				0E352C331D4299F3005CD054 /* FinishedClash.swift */,
 				0E352C351D42A2A1005CD054 /* CurrentClash.swift */,
 				0EE725E21D6544630040423F /* UserProfile.swift */,
@@ -224,6 +238,10 @@
 				0EB57ED21CF778AD00E30272 /* Assets.xcassets */,
 				0EB57ED41CF778AD00E30272 /* LaunchScreen.storyboard */,
 				0EB57ED71CF778AD00E30272 /* Info.plist */,
+				0ED8CF6A1D9EF16C00CBA3EF /* antelope.jpg */,
+				0ED8CF681D9EF16700CBA3EF /* happybear.jpg */,
+				0ED8CF661D9EF16100CBA3EF /* penguins.jpg */,
+				0ED8CF641D9EF15A00CBA3EF /* polarbear.jpg */,
 				0E321BBC1D5E3A4900D9E215 /* PhotoclashLaunch.png */,
 				0E321BB61D5D1DA200D9E215 /* ChameleonOpen.png */,
 				0E321BB41D5D14F900D9E215 /* Chameleon2.png */,
@@ -377,9 +395,13 @@
 				0EB57ED11CF778AD00E30272 /* Main.storyboard in Resources */,
 				0E321BBD1D5E3A4900D9E215 /* PhotoclashLaunch.png in Resources */,
 				0E198A901D37F40000F25F53 /* 5star.png in Resources */,
+				0ED8CF651D9EF15A00CBA3EF /* polarbear.jpg in Resources */,
+				0ED8CF671D9EF16100CBA3EF /* penguins.jpg in Resources */,
+				0ED8CF691D9EF16700CBA3EF /* happybear.jpg in Resources */,
 				0E321BB11D5CF72F00D9E215 /* Chameleon.png in Resources */,
 				0E3BBCC51D7616C8004F90CC /* noUser.jpg in Resources */,
 				0E321BB51D5D14F900D9E215 /* Chameleon2.png in Resources */,
+				0ED8CF6B1D9EF16C00CBA3EF /* antelope.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,8 +487,10 @@
 				0EBD511A1D3830480006C125 /* CurrentClashTableViewCell.swift in Sources */,
 				0E0E109B1D627A8900A573CE /* FacebookLoginViewController.swift in Sources */,
 				0EEE6ED81D38262E00B0094E /* MainFeedViewController.swift in Sources */,
+				0E76590C1DA8395300EABDB7 /* ClashCell.swift in Sources */,
 				0EE725E51D6578A10040423F /* SearchViewController.swift in Sources */,
 				0E506A911D73612600A6019E /* FriendsTableViewController.swift in Sources */,
+				0E76590A1DA8326000EABDB7 /* CollectionViewTableViewCell.swift in Sources */,
 				0EB57ECC1CF778AD00E30272 /* AppDelegate.swift in Sources */,
 				0EBD511C1D384E140006C125 /* FinishedClashTableViewCell.swift in Sources */,
 				0E506A8F1D6F4D2500A6019E /* UserProfileViewController.swift in Sources */,
