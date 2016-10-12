@@ -10,5 +10,8 @@ import UIKit
 
 class CollectionViewTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var hashtag: UILabel!
+    
+    
 
 }

@@ -38,6 +38,8 @@
 		0E506A911D73612600A6019E /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E506A901D73612600A6019E /* FriendsTableViewController.swift */; };
 		0E76590A1DA8326000EABDB7 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */; };
 		0E76590C1DA8395300EABDB7 /* ClashCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76590B1DA8395300EABDB7 /* ClashCell.swift */; };
+		0E7659101DABF42C00EABDB7 /* BlurrableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76590F1DABF42C00EABDB7 /* BlurrableCollectionView.swift */; };
+		0E7659121DAE9E1C00EABDB7 /* WhiteRhino.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E7659111DAE9E1C00EABDB7 /* WhiteRhino.png */; };
 		0EB57ECC1CF778AD00E30272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */; };
 		0EB57ED11CF778AD00E30272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB57ECF1CF778AD00E30272 /* Main.storyboard */; };
 		0EB57ED31CF778AD00E30272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB57ED21CF778AD00E30272 /* Assets.xcassets */; };
@@ -107,6 +109,8 @@
 		0E506A901D73612600A6019E /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		0E76590B1DA8395300EABDB7 /* ClashCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClashCell.swift; sourceTree = "<group>"; };
+		0E76590F1DABF42C00EABDB7 /* BlurrableCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurrableCollectionView.swift; sourceTree = "<group>"; };
+		0E7659111DAE9E1C00EABDB7 /* WhiteRhino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteRhino.png; sourceTree = "<group>"; };
 		0EB57EC81CF778AD00E30272 /* PhotoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB57ED01CF778AD00E30272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -212,13 +216,13 @@
 			children = (
 				0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */,
 				0EB57ECF1CF778AD00E30272 /* Main.storyboard */,
-				0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */,
 				0E506A901D73612600A6019E /* FriendsTableViewController.swift */,
 				0E0E109A1D627A8900A573CE /* FacebookLoginViewController.swift */,
 				0EEE6ED71D38262E00B0094E /* MainFeedViewController.swift */,
 				0E031DF21D3EE56E00EA9AE4 /* EditPhotoViewController.swift */,
 				0E031DF01D3EDF5A00EA9AE4 /* FusumaContainerViewController.swift */,
 				0EE725E41D6578A10040423F /* SearchViewController.swift */,
+				0E76590F1DABF42C00EABDB7 /* BlurrableCollectionView.swift */,
 				0E198A8D1D37E87B00F25F53 /* MyProfileViewController.swift */,
 				0E506A8E1D6F4D2500A6019E /* UserProfileViewController.swift */,
 				0E198A931D37FE0600F25F53 /* MyLocationContainerViewController.swift */,
@@ -228,6 +232,7 @@
 				0E321BB21D5CF7D700D9E215 /* LoadingClashesTableViewCell.swift */,
 				0EBD51191D3830480006C125 /* CurrentClashTableViewCell.swift */,
 				0EBD511B1D384E140006C125 /* FinishedClashTableViewCell.swift */,
+				0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */,
 				0EE725EA1D6CC9110040423F /* SuggestionCell.swift */,
 				0E76590B1DA8395300EABDB7 /* ClashCell.swift */,
 				0E352C331D4299F3005CD054 /* FinishedClash.swift */,
@@ -238,6 +243,7 @@
 				0EB57ED21CF778AD00E30272 /* Assets.xcassets */,
 				0EB57ED41CF778AD00E30272 /* LaunchScreen.storyboard */,
 				0EB57ED71CF778AD00E30272 /* Info.plist */,
+				0E7659111DAE9E1C00EABDB7 /* WhiteRhino.png */,
 				0ED8CF6A1D9EF16C00CBA3EF /* antelope.jpg */,
 				0ED8CF681D9EF16700CBA3EF /* happybear.jpg */,
 				0ED8CF661D9EF16100CBA3EF /* penguins.jpg */,
@@ -389,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB57ED61CF778AD00E30272 /* LaunchScreen.storyboard in Resources */,
+				0E7659121DAE9E1C00EABDB7 /* WhiteRhino.png in Resources */,
 				0EB57ED31CF778AD00E30272 /* Assets.xcassets in Resources */,
 				0E031DF51D3EEC5400EA9AE4 /* ic_close_white_48pt.png in Resources */,
 				0E321BB71D5D1DA200D9E215 /* ChameleonOpen.png in Resources */,
@@ -474,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7659101DABF42C00EABDB7 /* BlurrableCollectionView.swift in Sources */,
 				0E321BB31D5CF7D700D9E215 /* LoadingClashesTableViewCell.swift in Sources */,
 				0E198A8E1D37E87B00F25F53 /* MyProfileViewController.swift in Sources */,
 				0E352C341D4299F3005CD054 /* FinishedClash.swift in Sources */,

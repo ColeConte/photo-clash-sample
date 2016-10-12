@@ -10,5 +10,4 @@ import UIKit
 
 class ClashCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
-
 }

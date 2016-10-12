@@ -15,8 +15,9 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var timeRemaining: UILabel!
-    @IBOutlet weak var heart: UILabel!
-    @IBOutlet weak var heart2: UILabel!
+    @IBOutlet weak var heart: UIImageView!
+    @IBOutlet weak var heart2: UIImageView!
+
     var currentClash: CurrentClash!{
         didSet{
             //off by one second
@@ -44,7 +45,7 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
     }
     
     func doubleTapped(){
-        var theHeart: UILabel?
+        var theHeart: UIImageView?
         if pageControl.currentPage == 0{
             theHeart = heart
         }
@@ -53,7 +54,7 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
         }
         theHeart!.hidden = false
         theHeart!.alpha = 1.0
-        UIView.animateWithDuration(1.0, delay: 1.0, options: [], animations: {
+        UIView.animateWithDuration(1.0, delay: 0.5, options: [], animations: {
             
             theHeart!.alpha = 0
             

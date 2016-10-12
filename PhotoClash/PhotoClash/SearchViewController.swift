@@ -30,6 +30,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     var yPress: CGFloat?
     var selectedIndex: Int?
     var usersSelected = true
+    var previousTagScrolled: BlurrableCollectionView?
     
     @IBAction func backButtonPress(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -150,32 +151,49 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
 
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return filteredTags.count
-    }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "#" + sortedTags[section]
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sortedTags.count
     }
-    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        header.textLabel?.textAlignment = .Center
+
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tagsTableView.dequeueReusableCellWithIdentifier("ImagesCell")! as! CollectionViewTableViewCell
+        cell.collectionView.reloadData()
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tagsTableView.dequeueReusableCellWithIdentifier("ImagesCell")! as! CollectionViewTableViewCell
+        cell.hashtag.text = "#" + sortedTags[indexPath.row]
+        cell.collectionView.tag = indexPath.row
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self
-        cell.collectionView.tag = indexPath.section
+        cell.collectionView.reloadData()
         return cell
     }
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return view.frame.width/3 // -1
     }
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        let label = UILabel()
-        label.text = "#" + sortedTags[section]
-        return label.frame.height + 8
+
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        if scrollView != tagsTableView && scrollView != suggestionsCollectionView{
+            let tagsCollectionView = scrollView as! BlurrableCollectionView
+            if tagsCollectionView != previousTagScrolled{
+                if previousTagScrolled != nil{
+                    let previousTagsTableViewCell = previousTagScrolled?.superview?.superview as! CollectionViewTableViewCell
+                    previousTagsTableViewCell.hashtag.hidden = false
+                    previousTagScrolled!.blurEffect!.hidden = false
+                    print(tagsCollectionView.tag)
+                }
+                let tagsTableViewCell = tagsCollectionView.superview?.superview as! CollectionViewTableViewCell
+                print(tagsCollectionView.tag)
+                tagsTableViewCell.hashtag.hidden = true
+                tagsCollectionView.blurEffect?.hidden = true
+                previousTagScrolled = tagsCollectionView
+            }
+            
+        }
     }
     
      func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -211,7 +229,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         }
         else{
             let cell:ClashCell = collectionView.dequeueReusableCellWithReuseIdentifier("ClashCell", forIndexPath: indexPath) as! ClashCell
-            cell.image.image = UIImage(named: "polarbear.jpg")
+            let originalImage = UIImage(named: "polarbear.jpg")!
+            cell.image.image = originalImage
             return cell
         }
 
