@@ -21,14 +21,14 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
     var currentClash: CurrentClash!{
         didSet{
             //off by one second
-            let oneDay: NSTimeInterval = 60.0*60.0*24.0
-            let currentTime = NSDate()
-            timerCounter = currentClash.startTime.dateByAddingTimeInterval(oneDay).timeIntervalSinceDate(currentTime)
+            let oneDay: TimeInterval = 60.0*60.0*24.0
+            let currentTime = Date()
+            timerCounter = currentClash.startTime.addingTimeInterval(oneDay).timeIntervalSince(currentTime)
             timeRemaining.text = stringFromTimeInterval(timerCounter!)
             startTimer()
         }
     }
-    var timerCounter: NSTimeInterval?
+    var timerCounter: TimeInterval?
     
     
     override func awakeFromNib() {
@@ -38,7 +38,7 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
         super.awakeFromNib()
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.width
         let page:Int = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1)
         pageControl.currentPage = page
@@ -52,20 +52,20 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
         else{
             theHeart = heart2
         }
-        theHeart!.hidden = false
+        theHeart!.isHidden = false
         theHeart!.alpha = 1.0
-        UIView.animateWithDuration(1.0, delay: 0.5, options: [], animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: {
             
             theHeart!.alpha = 0
             
             }, completion: {
                 (value:Bool) in
                 
-                theHeart!.hidden = true
+                theHeart!.isHidden = true
         })
     }
     
-    func stringFromTimeInterval(interval: NSTimeInterval) -> String {
+    func stringFromTimeInterval(_ interval: TimeInterval) -> String {
         let interval = Int(interval)
         let seconds = interval % 60
         let minutes = (interval / 60) % 60
@@ -74,16 +74,16 @@ class CurrentClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
     }
     
     func startTimer() {
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(CurrentClashTableViewCell.onTimer(_:)), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CurrentClashTableViewCell.onTimer(_:)), userInfo: nil, repeats: true)
     }
     
-    @objc func onTimer(timer:NSTimer!) {
+    @objc func onTimer(_ timer:Timer!) {
         // Here is the string containing the timer
         // Update your label here
         if timerCounter == 0.0{
             //make this better
             timeRemaining.text = "00:00:00!!!"
-            self.userInteractionEnabled = false
+            self.isUserInteractionEnabled = false
         }
         timeRemaining.text = stringFromTimeInterval(timerCounter!)
         timerCounter! -= 1

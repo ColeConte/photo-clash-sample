@@ -16,7 +16,7 @@ class FusumaContainerViewController: UIViewController, FusumaDelegate{
 
     
     override func viewDidLoad() {
-        tabBarController?.tabBar.hidden = true
+        tabBarController?.tabBar.isHidden = true
         super.viewDidLoad()
         if self.childViewControllers.count == 1{
             fusumaView = self.childViewControllers[0] as? FusumaViewController
@@ -25,30 +25,30 @@ class FusumaContainerViewController: UIViewController, FusumaDelegate{
         }
     }
     
-    override func viewDidDisappear(animated: Bool) {
-        tabBarController?.tabBar.hidden = false
+    override func viewDidDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
     }
     
-    override func viewWillAppear(animated: Bool) {
-        tabBarController?.tabBar.hidden = true
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = true
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
     
     // Return the image which is selected from camera roll or is taken via the camera.
-    func fusumaImageSelected(image: UIImage) {
+    func fusumaImageSelected(_ image: UIImage) {
         photoToEdit = image
-        performSegueWithIdentifier("ToEditPhoto", sender: nil)
+        performSegue(withIdentifier: "ToEditPhoto", sender: nil)
     }
     
     // Return the image but called after is dismissed.
-    func fusumaDismissedWithImage(image: UIImage) {
+    func fusumaDismissedWithImage(_ image: UIImage) {
     }
     
-    func fusumaVideoCompleted(withFileURL fileURL: NSURL) {
+    func fusumaVideoCompleted(withFileURL fileURL: URL) {
         
         print("Called just after a video has been selected.")
     }
@@ -59,10 +59,10 @@ class FusumaContainerViewController: UIViewController, FusumaDelegate{
         print("Camera roll unauthorized")
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier != nil{
             if segue.identifier! == "ToEditPhoto"{
-                if let destination = (segue.destinationViewController as? EditPhotoViewController){
+                if let destination = (segue.destination as? EditPhotoViewController){
                     destination.photoToEdit = photoToEdit
                 }
             }

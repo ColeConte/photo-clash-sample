@@ -16,8 +16,8 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if FBSDKAccessToken.currentAccessToken() != nil {
-            self.performSegueWithIdentifier("ToTabBar", sender: nil)
+        if FBSDKAccessToken.current() != nil {
+            self.performSegue(withIdentifier: "ToTabBar", sender: nil)
         }
         else{
             let loginButton = FBSDKLoginButton()
@@ -28,42 +28,52 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection, result, error) -> Void in
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).start { (connection, result, error) -> Void in
             if error == nil{
-                let strFirstName: String = (result.objectForKey("first_name") as? String)!
-                let strLastName: String = (result.objectForKey("last_name") as? String)!
-                let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
-                let image : UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)!
-                let name = strFirstName + " " + strLastName
-                currentUser = UserProfile(username: name, profilePicture: image, previousClashes: [], clashpoints: 0, friends: [])
-                self.friendsGraphRequest()
+                if let dic = result as? NSDictionary{
+                    let strFirstName: String = (dic["first_name"] as? String)!
+                    let strLastName: String = (dic["last_name"] as? String)!
+                    let strPictureURL: String = ((((dic["picture"] as! NSDictionary)["data"]) as! NSDictionary)["url"] as? String)!
+                    let image : UIImage = UIImage(data: try! Data(contentsOf: URL(string: strPictureURL)!))!
+                    let name = strFirstName + " " + strLastName
+                    currentUser = UserProfile(username: name, profilePicture: image, previousClashes: [], clashpoints: 0, friends: [])
+                    self.friendsGraphRequest()
+                }
             }
         }
     }
     
     
     func friendsGraphRequest(){
-        FBSDKGraphRequest.init(graphPath: "me/taggable_friends", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection,result,error) -> Void in
+        FBSDKGraphRequest.init(graphPath: "me/taggable_friends", parameters: ["fields":"first_name, last_name, picture.type(large)"]).start { (connection,result,error) -> Void in
             if error == nil{
-                let friendObjects = result.objectForKey("data") as! [NSDictionary]
-                for friend in friendObjects{
-                    let strFirstName: String = (friend.objectForKey("first_name") as? String)!
-                    let strLastName: String = (friend.objectForKey("last_name") as? String)!
-                    let strPictureURL: String = (friend.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
-                    let image : UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)!
-                    let name = strFirstName + " " + strLastName
-                    let friend = UserProfile(username: name, profilePicture: image, previousClashes: [], clashpoints: 0, friends: [])
-                    facebookFriends += [friend]
+                if let resultDict = result as? NSDictionary{
+                    if let friendObjects = resultDict["data"] as? NSArray{
+                        for friend in friendObjects{
+                            if let friendDict = friend as? NSDictionary{
+                                let strFirstName: String = (friendDict["first_name"] as? String)!
+                                let strLastName: String = (friendDict["last_name"] as? String)!
+                                let strPictureURL: String = ((((friendDict["picture"] as! NSDictionary)["data"]) as! NSDictionary)["url"] as? String)!
+                                let image : UIImage = UIImage(data: try! Data(contentsOf: URL(string: strPictureURL)!))!
+                                let name = strFirstName + " " + strLastName
+                                let friend = UserProfile(username: name, profilePicture: image, previousClashes: [], clashpoints: 0, friends: [])
+                                facebookFriends += [friend]
+                            }
+                                                        }
+                        currentUser?.friends = facebookFriends
+                        self.performSegue(withIdentifier: "ToTabBar", sender: nil)
+                    }
                 }
-                currentUser?.friends = facebookFriends
-                self.performSegueWithIdentifier("ToTabBar", sender: nil)
-            }
+                }
+
+                //let friendObjects = result.object(forKey: "data") as! [NSDictionary]
+
             
         }
     }
     
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         
     }
 

@@ -21,7 +21,7 @@ class FinishedClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
 
 
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.width
         let page:Int = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1)
         pageControl.currentPage = page
@@ -29,13 +29,13 @@ class FinishedClashTableViewCell: UITableViewCell, UIScrollViewDelegate {
             votePercentage.text = String(finishedClash.pic1Pct) + "%"
             profilePic.image = finishedClash.user1.profilePicture
             userName.text = finishedClash.user1.username
-            votePercentage.textColor = UIColor.greenColor()
+            votePercentage.textColor = UIColor.green
         }
         else{
             votePercentage.text = String(finishedClash.pic2Pct) + "%"
             profilePic.image = finishedClash.user2.profilePicture
             userName.text = finishedClash.user2.username
-            votePercentage.textColor = UIColor.redColor()
+            votePercentage.textColor = UIColor.red
         }
     }
     

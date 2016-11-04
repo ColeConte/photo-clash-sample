@@ -16,21 +16,21 @@ class MyLocationContainerViewController: UIViewController, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        map.tintColor = UIColor.orangeColor()
+        map.tintColor = UIColor.orange
         map.showsUserLocation = true
-        let locationManager = (UIApplication.sharedApplication().delegate as! AppDelegate).locationManager
+        let locationManager = (UIApplication.shared.delegate as! AppDelegate).locationManager
         locationManager!.delegate = self
 
 
     }
     
-    func addRadiusCircle(location: CLLocation){
+    func addRadiusCircle(_ location: CLLocation){
         map.delegate = self
-        let circle = MKCircle(centerCoordinate: location.coordinate, radius: 80000 as CLLocationDistance) //50 mi
-        map.addOverlay(circle)
+        let circle = MKCircle(center: location.coordinate, radius: 80000 as CLLocationDistance) //50 mi
+        map.add(circle)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if !didUpdate{
             let location = locations.last!
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -43,11 +43,11 @@ class MyLocationContainerViewController: UIViewController, CLLocationManagerDele
 
     }
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKCircle {
             let circle = MKCircleRenderer(overlay: overlay)
-            circle.strokeColor = UIColor.orangeColor()
-            circle.fillColor = UIColor.orangeColor().colorWithAlphaComponent(0.2)
+            circle.strokeColor = UIColor.orange
+            circle.fillColor = UIColor.orange.withAlphaComponent(0.2)
             circle.lineWidth = 1
             return circle
         } else {

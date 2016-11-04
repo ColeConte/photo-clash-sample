@@ -19,16 +19,16 @@ class LoadingClashesTableViewCell: UITableViewCell {
         rotateAnimation.fromValue = CGFloat(M_PI * 2.0)
         rotateAnimation.duration = 3.0
         rotateAnimation.repeatCount = Float.infinity
-        self.chameleon.layer.addAnimation(rotateAnimation, forKey: nil)
+        self.chameleon.layer.add(rotateAnimation, forKey: nil)
         let crossFadeAnimation1 = CABasicAnimation(keyPath: "contents")
         let image1 = UIImage(named: "Chameleon.png")
         let image2 = UIImage(named: "Chameleon2.png")
-        crossFadeAnimation1.fromValue = image1!.CGImage
-        crossFadeAnimation1.toValue = image2!.CGImage
+        crossFadeAnimation1.fromValue = image1!.cgImage
+        crossFadeAnimation1.toValue = image2!.cgImage
         crossFadeAnimation1.autoreverses = true
         crossFadeAnimation1.duration = 3.0
         crossFadeAnimation1.repeatCount = Float.infinity
-        self.chameleon.layer.addAnimation(crossFadeAnimation1, forKey: nil)
+        self.chameleon.layer.add(crossFadeAnimation1, forKey: nil)
         
     }
 

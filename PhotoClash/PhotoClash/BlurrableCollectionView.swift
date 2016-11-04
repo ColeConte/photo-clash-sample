@@ -14,7 +14,7 @@ class BlurrableCollectionView: UICollectionView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.dark)
         blurEffect = UIVisualEffectView(effect: blur)
         //change
         blurEffect?.frame = self.bounds

@@ -19,50 +19,50 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var clashpointsButton: UIButton!
     @IBOutlet weak var clashpointsContainerView: UIView!
     @IBOutlet weak var friendsContainerView: UIView!
-    @IBAction func backButtonPress(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonPress(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
     
     var user: UserProfile?
 
-    @IBAction func pressedRecentClashesButton(sender: UIButton){
-        recentClashesButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
-        friendsButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-        clashpointsButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-        bar1.backgroundColor = UIColor.orangeColor()
-        bar2.backgroundColor = UIColor.lightGrayColor()
-        bar3.backgroundColor = UIColor.lightGrayColor()
-        clashpointsContainerView.hidden = true
-        friendsContainerView.hidden = true
+    @IBAction func pressedRecentClashesButton(_ sender: UIButton){
+        recentClashesButton.setTitleColor(UIColor.orange, for: UIControlState())
+        friendsButton.setTitleColor(UIColor.lightGray, for: UIControlState())
+        clashpointsButton.setTitleColor(UIColor.lightGray, for: UIControlState())
+        bar1.backgroundColor = UIColor.orange
+        bar2.backgroundColor = UIColor.lightGray
+        bar3.backgroundColor = UIColor.lightGray
+        clashpointsContainerView.isHidden = true
+        friendsContainerView.isHidden = true
 
     }
     
-    @IBAction func pressedFriendsButton(sender: UIButton){
-        friendsButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
-        recentClashesButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-        clashpointsButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-        bar2.backgroundColor = UIColor.orangeColor()
-        bar1.backgroundColor = UIColor.lightGrayColor()
-        bar3.backgroundColor = UIColor.lightGrayColor()
-        clashpointsContainerView.hidden = true
-        friendsContainerView.hidden = false
+    @IBAction func pressedFriendsButton(_ sender: UIButton){
+        friendsButton.setTitleColor(UIColor.orange, for: UIControlState())
+        recentClashesButton.setTitleColor(UIColor.lightGray, for: UIControlState())
+        clashpointsButton.setTitleColor(UIColor.lightGray, for: UIControlState())
+        bar2.backgroundColor = UIColor.orange
+        bar1.backgroundColor = UIColor.lightGray
+        bar3.backgroundColor = UIColor.lightGray
+        clashpointsContainerView.isHidden = true
+        friendsContainerView.isHidden = false
     }
     
-    @IBAction func pressedClashpointsButton(sender: UIButton){
-        clashpointsButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
-        friendsButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-        recentClashesButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-        bar3.backgroundColor = UIColor.orangeColor()
-        bar2.backgroundColor = UIColor.lightGrayColor()
-        bar1.backgroundColor = UIColor.lightGrayColor()
-        clashpointsContainerView.hidden = false
-        friendsContainerView.hidden = true
+    @IBAction func pressedClashpointsButton(_ sender: UIButton){
+        clashpointsButton.setTitleColor(UIColor.orange, for: UIControlState())
+        friendsButton.setTitleColor(UIColor.lightGray, for: UIControlState())
+        recentClashesButton.setTitleColor(UIColor.lightGray, for: UIControlState())
+        bar3.backgroundColor = UIColor.orange
+        bar2.backgroundColor = UIColor.lightGray
+        bar1.backgroundColor = UIColor.lightGray
+        clashpointsContainerView.isHidden = false
+        friendsContainerView.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clashpointsContainerView.hidden = true
-        friendsContainerView.hidden = true
+        clashpointsContainerView.isHidden = true
+        friendsContainerView.isHidden = true
         profilePic.layer.cornerRadius = profilePic.frame.size.height/4
         profilePic.clipsToBounds = true
         profilePic.image = user?.profilePicture
@@ -70,14 +70,14 @@ class UserProfileViewController: UIViewController {
         navigationItem.title = user?.username
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FriendsEmbed"{
-            if let friendsVC = segue.destinationViewController as? FriendsTableViewController{
+            if let friendsVC = segue.destination as? FriendsTableViewController{
                 friendsVC.user = user
             }
         }
         else if segue.identifier == "ClashpointsEmbed"{
-            if let clashpointsVC = segue.destinationViewController as? ClashpointsContainerViewController{
+            if let clashpointsVC = segue.destination as? ClashpointsContainerViewController{
                 clashpointsVC.user = user
             }
         }

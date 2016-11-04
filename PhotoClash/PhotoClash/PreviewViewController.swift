@@ -29,7 +29,7 @@ class PreviewViewController: UIViewController, UIPopoverPresentationControllerDe
     
     
     /// MARK: - UIPopoverPresentationControllerDelegate
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }

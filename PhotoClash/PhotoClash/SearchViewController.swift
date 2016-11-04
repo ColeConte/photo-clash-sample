@@ -32,43 +32,43 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     var usersSelected = true
     var previousTagScrolled: BlurrableCollectionView?
     
-    @IBAction func backButtonPress(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonPress(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func peopleButtonPress(sender: UIButton){
+    @IBAction func peopleButtonPress(_ sender: UIButton){
         usersSelected = true
-        tagsTableView.hidden = true
-        suggestionsCollectionView.hidden = false
-        suggestionsCollectionView.userInteractionEnabled = true
-        peopleButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
-        peopleBar.backgroundColor = UIColor.orangeColor()
-        tagsButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-        tagsBar.backgroundColor = UIColor.lightGrayColor()
+        tagsTableView.isHidden = true
+        suggestionsCollectionView.isHidden = false
+        suggestionsCollectionView.isUserInteractionEnabled = true
+        peopleButton.setTitleColor(UIColor.orange, for: UIControlState())
+        peopleBar.backgroundColor = UIColor.orange
+        tagsButton.setTitleColor(UIColor.lightGray, for: UIControlState())
+        tagsBar.backgroundColor = UIColor.lightGray
     }
     
-    @IBAction func tagsButtonPress(sender: UIButton){
+    @IBAction func tagsButtonPress(_ sender: UIButton){
         usersSelected = false
-        tagsTableView.hidden = false
-        suggestionsCollectionView.hidden = true
-        suggestionsCollectionView.userInteractionEnabled = false
-        peopleButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-        peopleBar.backgroundColor = UIColor.lightGrayColor()
-        tagsButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
-        tagsBar.backgroundColor = UIColor.orangeColor()
+        tagsTableView.isHidden = false
+        suggestionsCollectionView.isHidden = true
+        suggestionsCollectionView.isUserInteractionEnabled = false
+        peopleButton.setTitleColor(UIColor.lightGray, for: UIControlState())
+        peopleBar.backgroundColor = UIColor.lightGray
+        tagsButton.setTitleColor(UIColor.orange, for: UIControlState())
+        tagsBar.backgroundColor = UIColor.orange
     }
 
     //why?
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.frame.size = CGSize(width: view.frame.width - 40, height: 20)
-        self.searchBar.searchBarStyle = UISearchBarStyle.Minimal
-        self.searchBar.tintColor = UIColor.whiteColor()
-        self.searchBar.barTintColor = UIColor.whiteColor()
+        self.searchBar.searchBarStyle = UISearchBarStyle.minimal
+        self.searchBar.tintColor = UIColor.white
+        self.searchBar.barTintColor = UIColor.white
         self.searchBar.delegate = self
         self.searchBar.placeholder = "Search"
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.searchBar)
@@ -77,7 +77,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         tags = ["lit":6, "ootd": 10, "100likes": 2, "tbt": 1, "solit": 4, "fire": 3, "girlswholift": 1, "twerk":3, "blacktwitter":3, "finsta":3, "ootw":1, "hashtag":6, "abc":4, "leet":1, "dartboard":3, "basketball":1, "ballislife":12,"pig":2, "photoclash":3, "pc":2]
         filteredTags = tags
         addTagsToView()
-        tagsTableView.hidden = true
+        tagsTableView.isHidden = true
         tagsTableView.delegate = self
         tagsTableView.dataSource = self
         users = facebookFriends
@@ -85,7 +85,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         self.automaticallyAdjustsScrollViewInsets = false
         suggestionsCollectionView.delegate = self
         suggestionsCollectionView.dataSource = self
-        suggestionsCollectionView.backgroundColor = UIColor.whiteColor()
+        suggestionsCollectionView.backgroundColor = UIColor.white
         definesPresentationContext = true
         let tap = UITapGestureRecognizer()
         tap.delegate = self
@@ -100,39 +100,39 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
     
     
-    func tappedScreen(sender: UITapGestureRecognizer){
+    func tappedScreen(_ sender: UITapGestureRecognizer){
         view.endEditing(true)
     }
     
-    func clickAndHoldSuggestion(sender: UILongPressGestureRecognizer){
-        if sender.state == UIGestureRecognizerState.Ended{
-            presentingPopover!.dismissViewControllerAnimated(true, completion: nil)
+    func clickAndHoldSuggestion(_ sender: UILongPressGestureRecognizer){
+        if sender.state == UIGestureRecognizerState.ended{
+            presentingPopover!.dismiss(animated: true, completion: nil)
             presentingPopover = nil
         }
-        else if sender.state == UIGestureRecognizerState.Began{
-            let indexPath = suggestionsCollectionView.indexPathForItemAtPoint(sender.locationInView(suggestionsCollectionView))
+        else if sender.state == UIGestureRecognizerState.began{
+            let indexPath = suggestionsCollectionView.indexPathForItem(at: sender.location(in: suggestionsCollectionView))
             if indexPath != nil {
-                xPress = sender.locationInView(suggestionsCollectionView).x
-                yPress = sender.locationInView(suggestionsCollectionView).y
+                xPress = sender.location(in: suggestionsCollectionView).x
+                yPress = sender.location(in: suggestionsCollectionView).y
                 selectedIndex = indexPath?.row
-                performSegueWithIdentifier("PresentPopover", sender: nil)
+                performSegue(withIdentifier: "PresentPopover", sender: nil)
             }
         }
     }
     
 
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             if searchText == ""{
                 filteredUsers = users
                 filteredTags = tags
             }
             else{
                 filteredUsers = users.filter { user in
-                    return user.username.lowercaseString.containsString(searchText.lowercaseString)
+                    return user.username.lowercased().contains(searchText.lowercased())
                 }
                 let filtered = tags.filter { tag in
-                    return tag.0.lowercaseString.containsString(searchText.lowercaseString)
+                    return tag.0.lowercased().contains(searchText.lowercased())
                 }
                 filteredTags = [:]
                 for result in filtered{
@@ -150,20 +150,20 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
 
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedTags.count
     }
 
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tagsTableView.dequeueReusableCellWithIdentifier("ImagesCell")! as! CollectionViewTableViewCell
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let cell = tagsTableView.dequeueReusableCell(withIdentifier: "ImagesCell")! as! CollectionViewTableViewCell
         cell.collectionView.reloadData()
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tagsTableView.dequeueReusableCellWithIdentifier("ImagesCell")! as! CollectionViewTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tagsTableView.dequeueReusableCell(withIdentifier: "ImagesCell")! as! CollectionViewTableViewCell
         cell.hashtag.text = "#" + sortedTags[indexPath.row]
         cell.collectionView.tag = indexPath.row
         cell.collectionView.delegate = self
@@ -172,31 +172,31 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.width/3 // -1
     }
 
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         if scrollView != tagsTableView && scrollView != suggestionsCollectionView{
             let tagsCollectionView = scrollView as! BlurrableCollectionView
             if tagsCollectionView != previousTagScrolled{
                 if previousTagScrolled != nil{
                     let previousTagsTableViewCell = previousTagScrolled?.superview?.superview as! CollectionViewTableViewCell
-                    previousTagsTableViewCell.hashtag.hidden = false
-                    previousTagScrolled!.blurEffect!.hidden = false
+                    previousTagsTableViewCell.hashtag.isHidden = false
+                    previousTagScrolled!.blurEffect!.isHidden = false
                     print(tagsCollectionView.tag)
                 }
                 let tagsTableViewCell = tagsCollectionView.superview?.superview as! CollectionViewTableViewCell
                 print(tagsCollectionView.tag)
-                tagsTableViewCell.hashtag.hidden = true
-                tagsCollectionView.blurEffect?.hidden = true
+                tagsTableViewCell.hashtag.isHidden = true
+                tagsCollectionView.blurEffect?.isHidden = true
                 previousTagScrolled = tagsCollectionView
             }
             
         }
     }
     
-     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == suggestionsCollectionView{
             return filteredUsers.count
         }
@@ -207,28 +207,28 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
 
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == suggestionsCollectionView{
             userToPresent = filteredUsers[indexPath.row]
-            performSegueWithIdentifier("ToUserProfile", sender: nil)
+            performSegue(withIdentifier: "ToUserProfile", sender: nil)
         }
         else{
             //TODO
         }
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == suggestionsCollectionView{
-            let cell:SuggestionCell = collectionView.dequeueReusableCellWithReuseIdentifier("SuggestionCell", forIndexPath: indexPath) as! SuggestionCell
+            let cell:SuggestionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SuggestionCell", for: indexPath) as! SuggestionCell
             cell.image.image = filteredUsers[indexPath.row].profilePicture
             return cell
         }
         else{
-            let cell:ClashCell = collectionView.dequeueReusableCellWithReuseIdentifier("ClashCell", forIndexPath: indexPath) as! ClashCell
+            let cell:ClashCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClashCell", for: indexPath) as! ClashCell
             let originalImage = UIImage(named: "polarbear.jpg")!
             cell.image.image = originalImage
             return cell
@@ -239,35 +239,35 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
     
     // MARK: <UICollectionViewDelegateFlowLayout>
-    func collectionView( collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets{
+    func collectionView( _ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAt section: Int) -> UIEdgeInsets{
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
     
-    func collectionView (collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
+    func collectionView (_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         let cellLeg = (collectionView.frame.size.width/3 - 1)
-        return CGSizeMake(cellLeg,cellLeg)
+        return CGSize(width: cellLeg,height: cellLeg)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PresentPopover"{
-            if let destination = (segue.destinationViewController as? PreviewViewController) {
+            if let destination = (segue.destination as? PreviewViewController) {
                 presentingPopover = destination
                 let user = filteredUsers[selectedIndex!]
                 destination.user = user
-                destination.modalPresentationStyle = .Popover
-                destination.preferredContentSize = CGSizeMake(view.frame.width/2,view.frame.width/2)
+                destination.modalPresentationStyle = .popover
+                destination.preferredContentSize = CGSize(width: view.frame.width/2,height: view.frame.width/2)
                 //destination.view.layer.cornerRadius = destination.view.frame.width / 4
                 //destination.view.clipsToBounds = false
                 let popoverMenuViewController = destination.popoverPresentationController
-                popoverMenuViewController?.permittedArrowDirections = .Any
+                popoverMenuViewController?.permittedArrowDirections = .any
                 popoverMenuViewController?.delegate = destination
                 popoverMenuViewController?.sourceView = suggestionsCollectionView
                 popoverMenuViewController?.sourceRect = CGRect(
@@ -279,7 +279,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
             }
         }
         else if segue.identifier == "ToUserProfile"{
-            if let destination = (segue.destinationViewController as? UINavigationController)?.childViewControllers.first as? UserProfileViewController{
+            if let destination = (segue.destination as? UINavigationController)?.childViewControllers.first as? UserProfileViewController{
                 destination.user = userToPresent!
             }
         }
@@ -288,21 +288,21 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
 }
 
 extension Dictionary {
-    func sortedKeys(isOrderedBefore:(Key,Key) -> Bool) -> [Key] {
-        return Array(self.keys).sort(isOrderedBefore)
+    func sortedKeys(_ isOrderedBefore:(Key,Key) -> Bool) -> [Key] {
+        return Array(self.keys).sorted(by: isOrderedBefore)
     }
     
     // Slower because of a lot of lookups, but probably takes less memory (this is equivalent to Pascals answer in an generic extension)
-    func sortedKeysByValue(isOrderedBefore:(Value, Value) -> Bool) -> [Key] {
+    func sortedKeysByValue(_ isOrderedBefore:(Value, Value) -> Bool) -> [Key] {
         return sortedKeys {
             isOrderedBefore(self[$0]!, self[$1]!)
         }
     }
     
     // Faster because of no lookups, may take more memory because of duplicating contents
-    func keysSortedByValue(isOrderedBefore:(Value, Value) -> Bool) -> [Key] {
+    func keysSortedByValue(_ isOrderedBefore:(Value, Value) -> Bool) -> [Key] {
         return Array(self)
-            .sort() {
+            .sorted() {
                 let (_, lv) = $0
                 let (_, rv) = $1
                 return isOrderedBefore(lv, rv)

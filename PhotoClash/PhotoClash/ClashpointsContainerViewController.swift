@@ -19,11 +19,11 @@ class ClashpointsContainerViewController: UIViewController {
         super.viewDidLoad()
         clashPoints.text = String(user!.clashpoints)
         let originalImage = clashPointsStars.image
-        let cgStars = originalImage?.CGImage
+        let cgStars = originalImage?.cgImage
         //plug in clashpoints math
-        let imageArea = CGRectMake(0, 0, 0.2 * (originalImage?.size.width)!, (originalImage?.size.height)!)
-        let subImage = CGImageCreateWithImageInRect(cgStars, imageArea)
-        let image = UIImage(CGImage: subImage!)
+        let imageArea = CGRect(x: 0, y: 0, width: 0.2 * (originalImage?.size.width)!, height: (originalImage?.size.height)!)
+        let subImage = cgStars?.cropping(to: imageArea)
+        let image = UIImage(cgImage: subImage!)
         clashPointsStars.image = image
     }
     
