@@ -33,10 +33,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     var previousTagScrolled: BlurrableCollectionView?
     
     @IBAction func backButtonPress(_ sender: AnyObject) {
+        self.searchBar.resignFirstResponder()
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func peopleButtonPress(_ sender: UIButton){
+        self.searchBar.resignFirstResponder()
         usersSelected = true
         tagsTableView.isHidden = true
         suggestionsCollectionView.isHidden = false
@@ -48,6 +50,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     }
     
     @IBAction func tagsButtonPress(_ sender: UIButton){
+        self.searchBar.resignFirstResponder()
         usersSelected = false
         tagsTableView.isHidden = false
         suggestionsCollectionView.isHidden = true
@@ -62,6 +65,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,10 +92,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         suggestionsCollectionView.dataSource = self
         suggestionsCollectionView.backgroundColor = UIColor.white
         definesPresentationContext = true
-        let tap = UITapGestureRecognizer()
-        tap.delegate = self
-        tap.addTarget(self, action: #selector(SearchViewController.tappedScreen))
-        navigationController?.navigationBar.addGestureRecognizer(tap)
+        let tapScreen = UITapGestureRecognizer()
+        tapScreen.delegate = self
+        tapScreen.addTarget(self, action: #selector(SearchViewController.tappedScreen))
+        self.view.addGestureRecognizer(tapScreen)
         let longPress = UILongPressGestureRecognizer()
         longPress.delegate = self
         longPress.addTarget(self, action: #selector(SearchViewController.clickAndHoldSuggestion))
@@ -98,11 +103,19 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     }
     
     
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isKind(of: UICollectionViewCell.self))! || (touch.view?.isKind(of: UITableViewCell.self))! || (touch.view?.isKind(of: UISearchBar.self))!{
+            return false
+        }
+        return true
+    }
     
     
     func tappedScreen(_ sender: UITapGestureRecognizer){
-        view.endEditing(true)
+        self.searchBar.resignFirstResponder()
     }
+    
+    
     
     func clickAndHoldSuggestion(_ sender: UILongPressGestureRecognizer){
         if sender.state == UIGestureRecognizerState.ended{
@@ -121,6 +134,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     }
     
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.resignFirstResponder()
+        
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             if searchText == ""{
@@ -148,8 +165,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         tagsTableView.reloadData()
     }
     
-
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -159,13 +174,13 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let cell = tagsTableView.dequeueReusableCell(withIdentifier: "ImagesCell")! as! CollectionViewTableViewCell
+        cell.collectionView.tag = indexPath.row
         cell.collectionView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tagsTableView.dequeueReusableCell(withIdentifier: "ImagesCell")! as! CollectionViewTableViewCell
         cell.hashtag.text = "#" + sortedTags[indexPath.row]
-        cell.collectionView.tag = indexPath.row
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self
         cell.collectionView.reloadData()
@@ -177,6 +192,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     }
 
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.searchBar.resignFirstResponder()
         if scrollView != tagsTableView && scrollView != suggestionsCollectionView{
             let tagsCollectionView = scrollView as! BlurrableCollectionView
             if tagsCollectionView != previousTagScrolled{
@@ -184,7 +200,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
                     let previousTagsTableViewCell = previousTagScrolled?.superview?.superview as! CollectionViewTableViewCell
                     previousTagsTableViewCell.hashtag.isHidden = false
                     previousTagScrolled!.blurEffect!.isHidden = false
-                    print(tagsCollectionView.tag)
                 }
                 let tagsTableViewCell = tagsCollectionView.superview?.superview as! CollectionViewTableViewCell
                 print(tagsCollectionView.tag)
@@ -202,7 +217,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         }
         else{
             let tag = sortedTags[collectionView.tag]
-            return filteredTags[tag]!
+                return filteredTags[tag]!
         }
 
     }
