@@ -12,9 +12,12 @@ import CoreImage
 class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var colorSlider: UISlider!
+    @IBOutlet weak var sendClashButton: UIButton!
     @IBAction func backButtonPress() {
         dismiss(animated: false, completion: nil)
     }
+    var isSendMenuShowing: Bool = false
+    var sendToMenu: UITableView = UITableView()
     var color: UIColor = UIColor.white
     var photoToEdit: UIImage?
     var coreImage: CIImage?
@@ -29,6 +32,12 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     var curFilter = -1
     let filters: [CIFilter?] = [CIFilter(name: "CIPhotoEffectChrome"), CIFilter(name: "CIColorMatrix"), CIFilter(name: "CIPhotoEffectTonal"), CIFilter(name: "CIPhotoEffectTransfer")]
 
+    
+    @IBAction func sendClashButtonPress(){
+        sendToMenu.frame = CGRect(x: view.frame.minX, y: view.frame.minY, width: 0.5*view.frame.width, height: view.frame.height)
+        isSendMenuShowing = true
+        //dimming
+    }
     @IBAction func colorSliderValueChanged(_ sender: AnyObject) {
         let value = colorSlider.value
         if value < 1 && value > 0{
@@ -47,6 +56,7 @@ class EditPhotoViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sendToMenu.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         colorSlider.isHidden = true
         photo.image = photoToEdit
         guard let image = photo.image, let cgimg = image.cgImage else {

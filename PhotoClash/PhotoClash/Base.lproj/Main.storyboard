@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mkd-Ca-Sqm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mkd-Ca-Sqm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -15,7 +15,7 @@
         <!--Facebook Login View Controller-->
         <scene sceneID="04r-wm-5Xe">
             <objects>
-                <viewController id="Mkd-Ca-Sqm" customClass="FacebookLoginViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mkd-Ca-Sqm" customClass="FacebookLoginViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WdA-uH-yWB"/>
                         <viewControllerLayoutGuide type="bottom" id="wz7-by-gks"/>
@@ -44,7 +44,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="2bh-Al-N35" kind="relationship" relationship="viewControllers" id="dof-gA-mNI"/>
-                        <segue destination="wdG-Sw-Jgu" kind="relationship" relationship="viewControllers" id="itn-pE-smI"/>
                         <segue destination="2Yx-Jk-0MX" kind="relationship" relationship="viewControllers" id="s55-jL-JCC"/>
                     </connections>
                 </tabBarController>
@@ -55,7 +54,7 @@
         <!--Main Feed View Controller-->
         <scene sceneID="7dn-Ec-4ib">
             <objects>
-                <viewController id="6gd-Uo-zxv" customClass="MainFeedViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6gd-Uo-zxv" customClass="MainFeedViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c24-lx-ikw"/>
                         <viewControllerLayoutGuide type="bottom" id="TKM-jW-60y"/>
@@ -68,7 +67,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingClashesCell" id="LCe-qn-Xcw" customClass="LoadingClashesTableViewCell" customModule="PhotoClash" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingClashesCell" id="LCe-qn-Xcw" customClass="LoadingClashesTableViewCell" customModule="photo_clash_sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="322"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LCe-qn-Xcw" id="gjY-dz-cgN">
@@ -93,7 +92,7 @@
                                             <segue destination="5Ex-Af-0ze" kind="presentation" identifier="ToUserProfile" id="dlT-AO-WZG"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FinishedClashCell" rowHeight="199" id="fbb-fM-WCl" customClass="FinishedClashTableViewCell" customModule="PhotoClash" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FinishedClashCell" rowHeight="199" id="fbb-fM-WCl" customClass="FinishedClashTableViewCell" customModule="photo_clash_sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="350" width="375" height="199"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbb-fM-WCl" id="hRW-hy-bMv">
@@ -183,7 +182,7 @@
                                             <outlet property="votePercentage" destination="TKo-ee-zM6" id="5QB-gO-5LL"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentClashCell" rowHeight="368" id="jCy-2b-Gy1" customClass="CurrentClashTableViewCell" customModule="PhotoClash" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentClashCell" rowHeight="368" id="jCy-2b-Gy1" customClass="CurrentClashTableViewCell" customModule="photo_clash_sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="549" width="375" height="368"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jCy-2b-Gy1" id="uff-vu-OQv">
@@ -277,8 +276,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Isi-ky-D8a">
                         <nil key="title"/>
-                        <view key="titleView" contentMode="scaleToFill" id="HyV-pN-bAq" customClass="CustomControl" customModule="PhotoClash" customModuleProvider="target">
-                            <rect key="frame" x="94.5" y="5.5" width="186" height="33"/>
+                        <view key="titleView" contentMode="scaleToFill" id="HyV-pN-bAq" customClass="CustomControl" customModule="photo_clash_sample" customModuleProvider="target">
+                            <rect key="frame" x="95" y="6" width="186" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -303,7 +302,7 @@
         <!--Me-->
         <scene sceneID="LtU-qJ-oel">
             <objects>
-                <viewController id="GCJ-JH-T75" customClass="MyProfileViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GCJ-JH-T75" customClass="MyProfileViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="js1-TW-gL9"/>
                         <viewControllerLayoutGuide type="bottom" id="0MW-ZC-Z1p"/>
@@ -493,44 +492,6 @@
             </objects>
             <point key="canvasLocation" x="-773" y="-2280"/>
         </scene>
-        <!--Camera-->
-        <scene sceneID="Gyi-c7-pFv">
-            <objects>
-                <viewController title="Camera" id="wdG-Sw-Jgu" customClass="FusumaContainerViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="upU-M2-nXy"/>
-                        <viewControllerLayoutGuide type="bottom" id="3wQ-sC-Tga"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="f7t-M4-INN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uW-CQ-SEJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <connections>
-                                    <segue destination="o9m-sy-vbd" kind="embed" id="z8Y-u0-8Dz"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2uW-CQ-SEJ" secondAttribute="trailing" id="09l-bE-gd0"/>
-                            <constraint firstItem="2uW-CQ-SEJ" firstAttribute="leading" secondItem="f7t-M4-INN" secondAttribute="leading" id="iwX-pW-3c6"/>
-                            <constraint firstItem="3wQ-sC-Tga" firstAttribute="top" secondItem="2uW-CQ-SEJ" secondAttribute="bottom" id="jME-dc-J7X"/>
-                            <constraint firstItem="2uW-CQ-SEJ" firstAttribute="top" secondItem="upU-M2-nXy" secondAttribute="bottom" id="nOe-hM-Cog"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="Camera" selectedImage="Camera" id="04r-0w-xAr">
-                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-10"/>
-                    </tabBarItem>
-                    <connections>
-                        <segue destination="gaR-r5-WiJ" kind="presentation" identifier="ToEditPhoto" id="isN-Xy-KNe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L7v-l6-Vty" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="387" y="-2280"/>
-        </scene>
         <!--Me-->
         <scene sceneID="0l3-us-MXD">
             <objects>
@@ -555,7 +516,7 @@
         <!--User Profile View Controller-->
         <scene sceneID="kOB-SS-AOL">
             <objects>
-                <viewController id="Z1t-eq-DKK" customClass="UserProfileViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Z1t-eq-DKK" customClass="UserProfileViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LCs-Eq-lsr"/>
                         <viewControllerLayoutGuide type="bottom" id="jcR-0l-UD7"/>
@@ -698,7 +659,7 @@
         <!--Search View Controller-->
         <scene sceneID="cz9-lL-CYO">
             <objects>
-                <viewController id="PlC-NK-rTi" customClass="SearchViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PlC-NK-rTi" customClass="SearchViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vnO-0q-OZh"/>
                         <viewControllerLayoutGuide type="bottom" id="GbU-Oo-xmS"/>
@@ -716,7 +677,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuggestionCell" id="1a7-pa-dc9" customClass="SuggestionCell" customModule="PhotoClash" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuggestionCell" id="1a7-pa-dc9" customClass="SuggestionCell" customModule="photo_clash_sample" customModuleProvider="target">
                                         <rect key="frame" x="60" y="0.0" width="255" height="208"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -792,14 +753,14 @@
                                 <rect key="frame" x="0.0" y="119" width="375" height="548"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagesCell" rowHeight="223" id="1L2-tN-uap" customClass="CollectionViewTableViewCell" customModule="PhotoClash" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagesCell" rowHeight="223" id="1L2-tN-uap" customClass="CollectionViewTableViewCell" customModule="photo_clash_sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="223"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1L2-tN-uap" id="Y4G-J1-I5m">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cHI-rT-oUo" customClass="BlurrableCollectionView" customModule="PhotoClash" customModuleProvider="target">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cHI-rT-oUo" customClass="BlurrableCollectionView" customModule="photo_clash_sample" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="msQ-6a-TBM">
@@ -809,7 +770,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClashCell" id="XxT-lb-k6o" customClass="ClashCell" customModule="PhotoClash" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClashCell" id="XxT-lb-k6o" customClass="ClashCell" customModule="photo_clash_sample" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="4.5" width="253" height="213"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -912,12 +873,12 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2973" y="24"/>
+            <point key="canvasLocation" x="3911.1999999999998" y="23.838080959520241"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="6T4-Vh-8tc">
             <objects>
-                <viewController id="h2N-Lk-DQL" customClass="PreviewViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h2N-Lk-DQL" customClass="PreviewViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="42g-xy-7fw"/>
                         <viewControllerLayoutGuide type="bottom" id="jAk-Xx-s8c"/>
@@ -969,12 +930,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEX-Id-xDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2973" y="1002"/>
+            <point key="canvasLocation" x="3912" y="1001.1994002998501"/>
         </scene>
         <!--Clashpoints Container View Controller-->
         <scene sceneID="RCB-xC-IJP">
             <objects>
-                <viewController id="XvN-8n-Nu2" customClass="ClashpointsContainerViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XvN-8n-Nu2" customClass="ClashpointsContainerViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ada-ab-W91"/>
                         <viewControllerLayoutGuide type="bottom" id="KJ5-dP-TzO"/>
@@ -1018,7 +979,7 @@
         <!--My Location Container View Controller-->
         <scene sceneID="eZK-Cu-KI3">
             <objects>
-                <viewController id="YL4-DD-hTO" customClass="MyLocationContainerViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YL4-DD-hTO" customClass="MyLocationContainerViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FI8-jc-qc5"/>
                         <viewControllerLayoutGuide type="bottom" id="CNJ-xx-bRn"/>
@@ -1047,75 +1008,10 @@
             </objects>
             <point key="canvasLocation" x="1642" y="-567"/>
         </scene>
-        <!--Edit Photo View Controller-->
-        <scene sceneID="kwR-ko-Lqd">
-            <objects>
-                <viewController id="gaR-r5-WiJ" customClass="EditPhotoViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Z0g-Td-0LA"/>
-                        <viewControllerLayoutGuide type="bottom" id="sd0-w1-0Qo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aaf-9o-gru">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAH-bO-Hwi">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAx-Hj-gdk">
-                                <rect key="frame" x="8" y="28" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="UlM-Mb-gPf"/>
-                                    <constraint firstAttribute="width" constant="30" id="ruJ-il-pMq"/>
-                                </constraints>
-                                <state key="normal" image="ic_close_white_48pt.png"/>
-                                <connections>
-                                    <action selector="backButtonPress" destination="gaR-r5-WiJ" eventType="touchUpInside" id="j2W-uI-2PN"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.1000000000000001" minValue="-0.10000000000000001" maxValue="1.1000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="le4-hQ-R8k">
-                                <rect key="frame" x="44" y="28" width="279" height="31"/>
-                                <connections>
-                                    <action selector="colorSliderValueChanged:" destination="gaR-r5-WiJ" eventType="valueChanged" id="6Iw-ve-bM4"/>
-                                </connections>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afr-ua-whd">
-                                <rect key="frame" x="329" y="28" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="H5I-vE-MlL"/>
-                                    <constraint firstAttribute="width" constant="30" id="zc0-cM-WzI"/>
-                                </constraints>
-                                <state key="normal" image="Draw"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="le4-hQ-R8k" firstAttribute="top" secondItem="Z0g-Td-0LA" secondAttribute="bottom" constant="8" id="0XP-3M-BSb"/>
-                            <constraint firstItem="Afr-ua-whd" firstAttribute="top" secondItem="Z0g-Td-0LA" secondAttribute="bottom" constant="8" id="44x-lT-Xmt"/>
-                            <constraint firstItem="Afr-ua-whd" firstAttribute="trailing" secondItem="aaf-9o-gru" secondAttribute="trailingMargin" id="CW5-oX-MOj"/>
-                            <constraint firstItem="JAH-bO-Hwi" firstAttribute="top" secondItem="Z0g-Td-0LA" secondAttribute="bottom" id="D19-yu-IvX"/>
-                            <constraint firstItem="sd0-w1-0Qo" firstAttribute="top" secondItem="JAH-bO-Hwi" secondAttribute="bottom" id="NTf-vV-QZ3"/>
-                            <constraint firstItem="Afr-ua-whd" firstAttribute="leading" secondItem="le4-hQ-R8k" secondAttribute="trailing" constant="8" id="fC2-md-FKB"/>
-                            <constraint firstItem="JAH-bO-Hwi" firstAttribute="leading" secondItem="aaf-9o-gru" secondAttribute="leading" id="gIZ-5h-xTe"/>
-                            <constraint firstItem="PAx-Hj-gdk" firstAttribute="leading" secondItem="aaf-9o-gru" secondAttribute="leading" constant="8" id="gJ7-3z-IZe"/>
-                            <constraint firstItem="PAx-Hj-gdk" firstAttribute="top" secondItem="Z0g-Td-0LA" secondAttribute="bottom" constant="8" id="mJm-Lc-gDz"/>
-                            <constraint firstItem="le4-hQ-R8k" firstAttribute="leading" secondItem="PAx-Hj-gdk" secondAttribute="trailing" constant="8" id="nRp-hN-eAM"/>
-                            <constraint firstAttribute="trailing" secondItem="JAH-bO-Hwi" secondAttribute="trailing" id="vba-Nz-RfL"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="colorSlider" destination="le4-hQ-R8k" id="WKX-Gu-dB3"/>
-                        <outlet property="photo" destination="JAH-bO-Hwi" id="jcy-rg-Cpd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7er-ty-Kvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="386.39999999999998" y="-1313.793103448276"/>
-        </scene>
         <!--Notifications Container View Controller-->
         <scene sceneID="GY0-Uh-9JL">
             <objects>
-                <viewController id="gG0-2T-eqm" customClass="NotificationsContainerViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gG0-2T-eqm" customClass="NotificationsContainerViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="baw-5V-WZ5"/>
                         <viewControllerLayoutGuide type="bottom" id="4O7-Sq-ROX"/>
@@ -1171,24 +1067,6 @@
             </objects>
             <point key="canvasLocation" x="915" y="-555"/>
         </scene>
-        <!--Fusuma View Controller-->
-        <scene sceneID="vBF-2x-6lu">
-            <objects>
-                <viewController id="o9m-sy-vbd" customClass="FusumaViewController" customModule="Fusuma" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DQp-4y-Ddh"/>
-                        <viewControllerLayoutGuide type="bottom" id="XaX-wy-BbE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4Eq-Le-pbg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbi-fP-mrf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="355" y="-85.5"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="U2h-hT-lk7">
             <objects>
@@ -1228,7 +1106,7 @@
         <!--Friends Table View Controller-->
         <scene sceneID="xvX-7O-lNI">
             <objects>
-                <viewController id="iFL-kz-yxY" customClass="FriendsTableViewController" customModule="PhotoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iFL-kz-yxY" customClass="FriendsTableViewController" customModule="photo_clash_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ho6-Ge-fuf"/>
                         <viewControllerLayoutGuide type="bottom" id="Shc-HQ-6uu"/>
@@ -1273,13 +1151,10 @@
     </scenes>
     <resources>
         <image name="5star.png" width="881" height="155"/>
-        <image name="Camera" width="27" height="25"/>
         <image name="Chameleon.png" width="409" height="464"/>
-        <image name="Draw" width="25" height="25"/>
         <image name="Feed" width="27" height="18"/>
         <image name="MyProfile" width="26" height="25"/>
         <image name="WhiteRhino.png" width="736" height="537"/>
-        <image name="ic_close_white_48pt.png" width="48" height="48"/>
         <image name="noUser.jpg" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>

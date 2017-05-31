@@ -2,17 +2,17 @@
 # platform :ios, '8.0'
 # Uncomment this line if you're using Swift
 use_frameworks!
-pod 'Fusuma'
+pod 'Firebase/Core'
 
-target 'PhotoClash' do
-
-end
-
-target 'PhotoClashTests' do
+target 'photo-clash-sample' do
 
 end
 
-target 'PhotoClashUITests' do
+target 'photo-clash-sampleTests' do
+
+end
+
+target 'photo-clash-sampleUITests' do
 
 end
 

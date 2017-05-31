@@ -7,487 +7,508 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A4E00C48BB150B268BA3DF229D935F7 /* FSImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B443A557971434C990E65B8A5AC33 /* FSImageCropView.swift */; };
-		20B9F03D6CB512A896CF681A2D8B5203 /* FSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B749E25F5D04FB453503A7AB07DF99 /* FSConstants.swift */; };
-		244C7FC70B4B65CC8CC9EE2C8FC0B9EE /* Pods-PhotoClashTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EEF12E293DFD7073E3B9C8C62F5D4D /* Pods-PhotoClashTests-dummy.m */; };
-		2BB0FCAFC870B51E5FBD78C37B9FFFF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		3596F29AB03F646E7F716F187993FB28 /* Pods-PhotoClashUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC9EBBAF430B2B3DB5D645A75180E94 /* Pods-PhotoClashUITests-dummy.m */; };
-		3A2F78316CF8E309322F667644E6197D /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868F65959F4ECC606C4AA1D8BAA253B /* FusumaViewController.swift */; };
-		3A5D2E073DC2AD156588C20ECF6D6E87 /* FSAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85845D4FCEF0FBFACBA02ED26D78942 /* FSAlbumView.xib */; };
-		41125D861C951E721D536EF9358E3549 /* FSAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CE3667932A9C65A8CB78A2C09DA7AB /* FSAlbumViewCell.swift */; };
-		4425298C494DA38EA21CE37C52EC44E6 /* Fusuma-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE18599124DC703CCBF6577DE56716 /* Fusuma-dummy.m */; };
-		6675F4809C5215D98FAFCBAE8C2EF2D5 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB54CCB79E3F33C1BEE9C023741D3B8F /* FusumaViewController.xib */; };
-		6B292A19082835043E504F3B7BBCE9E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		6E3DA0426CA9B1EFE0A6B9C871DA20D3 /* Pods-PhotoClashTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F5AFC3002978997758C69573F1DAC6 /* Pods-PhotoClashTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EA01B8E4C4B5526D30CF5B1E42D48A4 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 621D9868B7C47D5D92F514D7C8B2A3A6 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7625DD466CF3049067583B579D1FF1A1 /* FSVideoCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4762C86774178F707DCE9F3ABA2DFDF5 /* FSVideoCameraView.xib */; };
-		834C06F071C731DE05B0F06522DFDE7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		837C62DFFE49672DA7FA4EC47E469EAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		8681BBA9F17474482885383595964319 /* FSCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF778C0F45E2022CBE3AA9BFF36176C /* FSCameraView.xib */; };
-		8F7107C495749BAACF89D77F32D232B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		9889C3CB27F58FF8E7677F56F637ED21 /* FSCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFC44AFE195F73155317D6DF9A1AB4 /* FSCameraView.swift */; };
-		991635042381BCCA4F3CF4BB68B9DF71 /* Pods-PhotoClash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8BBDDED97F2A83AC29142D89AC1D3C9 /* Pods-PhotoClash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A015022EA3075AD36B3D01108710266 /* Pods-PhotoClash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C10D18EC1D01F313902D74C129411120 /* Pods-PhotoClash-dummy.m */; };
-		9E6039187937B59F54618466C1DFCCDE /* FSVideoCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614C5C315C9F67A7A273F94BB4035A30 /* FSVideoCameraView.swift */; };
-		AC68615DFB9CDA3638AAEC704CD95DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427FDC4E6130005591A94B287587AC3B /* Assets.xcassets */; };
-		B01A5420F84E59C6F3173C0E1F4EB6F6 /* FSAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9E400F4EBB40F53F48F01359FD2AAD /* FSAlbumViewCell.xib */; };
-		B7D52093D7BF8222BAC6102AEF5A0F15 /* Fusuma-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C76C199A1A5705200C941C67310AF5E0 /* Fusuma-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E93AEFD2F0D64CBCB965979ED7957354 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A485A976D70E797A0552116E2D119C4 /* Pods-dummy.m */; };
-		E94FE07869E7F28CAF4AE9208CA3C3A2 /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD716438461F9C44A473E55C1BA39E /* FSAlbumView.swift */; };
-		FC274C06102076CF4A463FF7B1D09A63 /* Pods-PhotoClashUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE0E2428F8B107BE49204BEDECE7162 /* Pods-PhotoClashUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		267D3C5D29FD843CE814F54D10386483 /* Pods-photo-clash-sample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F161361A33D0CF3D8749B60947C36F04 /* Pods-photo-clash-sample-dummy.m */; };
+		3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B272ECBC5206EB79C715670F53E3F18 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A37253571EDF7F804854C507D994511 /* Pods-photo-clash-sampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 309F9E0752F5870460EBEE82E65067D5 /* Pods-photo-clash-sampleTests-dummy.m */; };
+		6AC7901ACA5D7CECB8D019335C8954ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		7275EFBD4848CB4B9B23F041FEBFD8D0 /* Pods-photo-clash-sample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 433AFBAA51F6A150D31323D5561B9748 /* Pods-photo-clash-sample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7484A907FADAB5DF0DF92B482BF43717 /* Pods-photo-clash-sampleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9815EA409B434E343BFB72A7149B280 /* Pods-photo-clash-sampleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AB7171A7E08054898AE2CF33FD3BA8D /* Pods-photo-clash-sampleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F69470B574B30A6FC3BD066A5C7A56B5 /* Pods-photo-clash-sampleUITests-dummy.m */; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39252B2E689B2B61AFE2AF50651B130C /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF4489226B7CD8054F8C9D5F96F4B83E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		D131D433E78CFB042CF3EC8BD9304AE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 69D49FCFB1469996E9BF2795DC070ACD /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5D2A0AE91EEC3AFAD886142E930F4FF /* Pods-photo-clash-sampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A3FC8F52AA6F69BCFC43DBAFD7A34D6 /* Pods-photo-clash-sampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BA6DF1FE29A0E9BEA1803603149102 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D9B4178C76FA5EDF8160F6514C971 /* GoogleToolboxForMac-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4E0B47A240A7F86A39B0C9DD8E2EE0F5 /* PBXContainerItemProxy */ = {
+		A414DA47BD772232E0D21D8A6FB4A6BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7380ABD049E12DCFEC9B9E1D2D52C627;
-			remoteInfo = Fusuma;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
 		};
-		63AE144E10F1F87F4980C3D3ADD6C952 /* PBXContainerItemProxy */ = {
+		ABFE1F3977F03E7FB739A4AD8D04E0B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7380ABD049E12DCFEC9B9E1D2D52C627;
-			remoteInfo = Fusuma;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
 		};
-		7131525CABCA8CD4DFE291A054F64212 /* PBXContainerItemProxy */ = {
+		D0A3A2254A61FE2C39DBD6516BA4C356 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7380ABD049E12DCFEC9B9E1D2D52C627;
-			remoteInfo = Fusuma;
-		};
-		D1E4C91E9CD97AB399B27BC20C185217 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7380ABD049E12DCFEC9B9E1D2D52C627;
-			remoteInfo = Fusuma;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B6FA8117167B2164D1BB7851EC29A9 /* Fusuma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fusuma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0339E8FCC0E99AB55EE9B80A4C010EA4 /* Pods-PhotoClashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoClashTests.release.xcconfig"; sourceTree = "<group>"; };
-		050CE1BA09F1D781478120B136C03CE8 /* Pods-PhotoClash-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoClash-acknowledgements.plist"; sourceTree = "<group>"; };
-		0958BC4087718CA66E520B1A2717A1B3 /* Pods-PhotoClash-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoClash-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0C645EAB52D90B673D5133B22C8D8B60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D0661B17865038AC3BA0ED1B2760A37 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		0DA84A0BCBC26BCCF31F52AA5CA08BD1 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		11EC8D51F560C395097AD538A302FF81 /* Pods-PhotoClashTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoClashTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		11F5AFC3002978997758C69573F1DAC6 /* Pods-PhotoClashTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoClashTests-umbrella.h"; sourceTree = "<group>"; };
-		134C7100FFF0B0D5ADD5997189995FE8 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		1561DB37BDB39CF6E474A7422DEAB3B0 /* Pods_PhotoClash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoClash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A97B1954CD96309E95E2200E4258678 /* Pods-PhotoClash-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoClash-frameworks.sh"; sourceTree = "<group>"; };
-		1C28E6DD2662AC3A562B10E5A0211E8A /* Pods-PhotoClashUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoClashUITests-frameworks.sh"; sourceTree = "<group>"; };
-		1D264832934419DA9AA8BC27A16CE4CE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F9E400F4EBB40F53F48F01359FD2AAD /* FSAlbumViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSAlbumViewCell.xib; path = Sources/FSAlbumViewCell.xib; sourceTree = "<group>"; };
-		3044D96E79E00F0C24101C72EAED2966 /* Pods-PhotoClash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PhotoClash.modulemap"; sourceTree = "<group>"; };
-		32AF56365FD134CDF2AADFECE269F2F9 /* Pods-PhotoClashTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoClashTests-frameworks.sh"; sourceTree = "<group>"; };
-		36BD066A4BA739A86101F0AC0766E309 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		3BE819D210ACC52FF126D31695666B78 /* Pods-PhotoClashTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoClashTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4166C8AFB82F79D47F599A227A895840 /* Pods-PhotoClashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoClashTests.debug.xcconfig"; sourceTree = "<group>"; };
-		427FDC4E6130005591A94B287587AC3B /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Sources/Assets.xcassets; sourceTree = "<group>"; };
-		42EEF12E293DFD7073E3B9C8C62F5D4D /* Pods-PhotoClashTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoClashTests-dummy.m"; sourceTree = "<group>"; };
-		44CE3667932A9C65A8CB78A2C09DA7AB /* FSAlbumViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSAlbumViewCell.swift; path = Sources/FSAlbumViewCell.swift; sourceTree = "<group>"; };
-		4762C86774178F707DCE9F3ABA2DFDF5 /* FSVideoCameraView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSVideoCameraView.xib; path = Sources/FSVideoCameraView.xib; sourceTree = "<group>"; };
-		48A998CC44FA06518E46764F87E08461 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		4EF86C56D1B89AC46E9A16C24F7FA56F /* Pods-PhotoClashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoClashUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		59D2C79DFCEAC0A0CAACAC7B09DDC8EC /* Pods-PhotoClashTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoClashTests-resources.sh"; sourceTree = "<group>"; };
-		5ABC17730A5C9D14AAC7B4FE5B7F3469 /* Pods_PhotoClashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoClashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		614C5C315C9F67A7A273F94BB4035A30 /* FSVideoCameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSVideoCameraView.swift; path = Sources/FSVideoCameraView.swift; sourceTree = "<group>"; };
-		621D9868B7C47D5D92F514D7C8B2A3A6 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		6868F65959F4ECC606C4AA1D8BAA253B /* FusumaViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FusumaViewController.swift; path = Sources/FusumaViewController.swift; sourceTree = "<group>"; };
-		6B1BCADDC84F07C964B3C89846F2ECF5 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		6E2FD34684C1EE98BE5EF547A57061D1 /* Pods-PhotoClash-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoClash-resources.sh"; sourceTree = "<group>"; };
-		6F1B443A557971434C990E65B8A5AC33 /* FSImageCropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSImageCropView.swift; path = Sources/FSImageCropView.swift; sourceTree = "<group>"; };
-		7253081D10D3D5883751DA0068EEE493 /* Fusuma.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Fusuma.xcconfig; sourceTree = "<group>"; };
-		7272F077D9C1A0DA3736C19D70E4C8BC /* Pods-PhotoClash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoClash.debug.xcconfig"; sourceTree = "<group>"; };
-		7416758246158C9BB7DD442B50F13A5F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79DFC44AFE195F73155317D6DF9A1AB4 /* FSCameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSCameraView.swift; path = Sources/FSCameraView.swift; sourceTree = "<group>"; };
-		839D2D4B67830C3B843BD95C60E79350 /* Pods-PhotoClashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoClashUITests.release.xcconfig"; sourceTree = "<group>"; };
-		99F463C118ED49CF7C0244F149A34B30 /* Pods_PhotoClashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoClashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A485A976D70E797A0552116E2D119C4 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		9E8AB82C4D439EF902D1A3D277033FC8 /* Pods-PhotoClashUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoClashUITests-resources.sh"; sourceTree = "<group>"; };
-		A01BBC25B38C15A2443870D3B7ADB968 /* Pods-PhotoClashUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoClashUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A2BF07432A167300220D1BB9EE7584E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8BBDDED97F2A83AC29142D89AC1D3C9 /* Pods-PhotoClash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoClash-umbrella.h"; sourceTree = "<group>"; };
-		A8BD716438461F9C44A473E55C1BA39E /* FSAlbumView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSAlbumView.swift; path = Sources/FSAlbumView.swift; sourceTree = "<group>"; };
-		A970EDA4DD43544C612ACD4FBFCC43AD /* Pods-PhotoClash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoClash.release.xcconfig"; sourceTree = "<group>"; };
-		AB54CCB79E3F33C1BEE9C023741D3B8F /* FusumaViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FusumaViewController.xib; path = Sources/FusumaViewController.xib; sourceTree = "<group>"; };
-		ABF778C0F45E2022CBE3AA9BFF36176C /* FSCameraView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSCameraView.xib; path = Sources/FSCameraView.xib; sourceTree = "<group>"; };
-		B4B749E25F5D04FB453503A7AB07DF99 /* FSConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSConstants.swift; path = Sources/FSConstants.swift; sourceTree = "<group>"; };
-		BA008F1C007E8807FF64BFC1362A4D6B /* Fusuma.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Fusuma.modulemap; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BFF497D8DBD4EA8EB314BCA46B7A02AC /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C10D18EC1D01F313902D74C129411120 /* Pods-PhotoClash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoClash-dummy.m"; sourceTree = "<group>"; };
-		C5D959A43FD51BC494142E7BDAC01D6A /* Pods-PhotoClashTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PhotoClashTests.modulemap"; sourceTree = "<group>"; };
-		C76C199A1A5705200C941C67310AF5E0 /* Fusuma-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fusuma-umbrella.h"; sourceTree = "<group>"; };
-		CD1F25723C30CD8CDF2B454D7B6171FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D85845D4FCEF0FBFACBA02ED26D78942 /* FSAlbumView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSAlbumView.xib; path = Sources/FSAlbumView.xib; sourceTree = "<group>"; };
-		DA6A80CA0AD67BA3BA39B675A48B39D2 /* Pods-PhotoClashUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PhotoClashUITests.modulemap"; sourceTree = "<group>"; };
-		DBE0E2428F8B107BE49204BEDECE7162 /* Pods-PhotoClashUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoClashUITests-umbrella.h"; sourceTree = "<group>"; };
-		EA797B7EF4C56A66C65186CC2108D372 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBBD88D138323D89E54A64746A9FD481 /* Pods-PhotoClashUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoClashUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EDC9EBBAF430B2B3DB5D645A75180E94 /* Pods-PhotoClashUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoClashUITests-dummy.m"; sourceTree = "<group>"; };
-		F5E36BDF310760D1E6624D1ADCA87583 /* Fusuma-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fusuma-prefix.pch"; sourceTree = "<group>"; };
-		FFAE18599124DC703CCBF6577DE56716 /* Fusuma-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Fusuma-dummy.m"; sourceTree = "<group>"; };
+		00D1CDDF771120776FDC8D96EA542EE6 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		091DA41C39562AD3ADE39129F13B8565 /* Pods_photo_clash_sampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_photo_clash_sampleTests.framework; path = "Pods-photo-clash-sampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1029D93AA602F61BC2B4F71453625D08 /* Pods-photo-clash-sampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photo-clash-sampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		11A4499510AD215427DABEB71A05C708 /* Pods-photo-clash-sample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-photo-clash-sample-acknowledgements.plist"; sourceTree = "<group>"; };
+		25A132F1869837E9A760EEB488B5D44B /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		2849118E66F8FB23260AFEB06402A6D0 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		2A1C0A89E505CCD131E1BC8A3379D262 /* Pods-photo-clash-sampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-photo-clash-sampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		309F9E0752F5870460EBEE82E65067D5 /* Pods-photo-clash-sampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-photo-clash-sampleTests-dummy.m"; sourceTree = "<group>"; };
+		375B73A01D836C2429E1E6EDF32FD3D4 /* Pods_photo_clash_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_photo_clash_sample.framework; path = "Pods-photo-clash-sample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		387D88176DA69ACE38CDCF12A16208B5 /* Pods-photo-clash-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photo-clash-sample.debug.xcconfig"; sourceTree = "<group>"; };
+		39252B2E689B2B61AFE2AF50651B130C /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		3A5CE4C3250E0E3A233B44417C51C32B /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		3C11B24327DCA859F51CF1668C211D68 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		410D9B4178C76FA5EDF8160F6514C971 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		433AFBAA51F6A150D31323D5561B9748 /* Pods-photo-clash-sample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-photo-clash-sample-umbrella.h"; sourceTree = "<group>"; };
+		435B80EBC7AF7B21410145AC427E25D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D48B278ED3B1FAE2133F48FAC325F12 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		596520D8C90D6BCA3B3DE0C901005D9C /* Pods-photo-clash-sampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photo-clash-sampleTests-resources.sh"; sourceTree = "<group>"; };
+		5B272ECBC5206EB79C715670F53E3F18 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		5EC531D07875E84B3CBF56FE9E02931B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D49FCFB1469996E9BF2795DC070ACD /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		6A3FC8F52AA6F69BCFC43DBAFD7A34D6 /* Pods-photo-clash-sampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-photo-clash-sampleTests-umbrella.h"; sourceTree = "<group>"; };
+		82CAFF0687853FB914D526B44E5FBC40 /* Pods-photo-clash-sampleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photo-clash-sampleUITests-frameworks.sh"; sourceTree = "<group>"; };
+		89EEA81C10BBA595170D096EE7891FC1 /* Pods-photo-clash-sample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-photo-clash-sample.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		952BF282E3B46DA9B11CDC56A38F0EF6 /* Pods-photo-clash-sampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-photo-clash-sampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9FE1022FF32E9AC05F1BA7E3034A9AC4 /* Pods-photo-clash-sample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photo-clash-sample-frameworks.sh"; sourceTree = "<group>"; };
+		A49CBFC48284E8A6213E23B7E9139968 /* Pods-photo-clash-sampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-photo-clash-sampleTests.modulemap"; sourceTree = "<group>"; };
+		AB3AE2D42055DA58666A4EB51B1BC481 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B248E58D830404EFC4CBFE5F8B2468C6 /* Pods-photo-clash-sampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-photo-clash-sampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B27EAFEC61EBB16EEE8E6717EE78E554 /* Pods-photo-clash-sampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-photo-clash-sampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B6AA8A418DEDFCB9CBC65584D4A1A9CC /* Pods-photo-clash-sampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photo-clash-sampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B80B2AAB7B1DA6E3A52FB199B1CACD6C /* Pods-photo-clash-sampleUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photo-clash-sampleUITests-resources.sh"; sourceTree = "<group>"; };
+		BBEF9555ABDC5D6ACB9DCB58763B04B4 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		C513DE6CEE1AAD23EFE32FEA6B6B6B9C /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		C80140D22B9BE00CFD1707BCD1FA038B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C88CEAD9913B6F15ACC765259A53796E /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D7A757F6AAE1DA46680D7802B30857A4 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		D91FD68D9942B9E0DF3619669F85E26F /* Pods-photo-clash-sampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photo-clash-sampleTests-frameworks.sh"; sourceTree = "<group>"; };
+		D9815EA409B434E343BFB72A7149B280 /* Pods-photo-clash-sampleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-photo-clash-sampleUITests-umbrella.h"; sourceTree = "<group>"; };
+		DD1717963709661C34AB6DBF64F837A3 /* Pods-photo-clash-sampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photo-clash-sampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD93EFD962BB4EEC988A3F96A2119904 /* Pods-photo-clash-sampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photo-clash-sampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E12E88E51A0B841C5AEDC9DA6E4EA02A /* Pods-photo-clash-sample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-photo-clash-sample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E20721D2E16BB97C91BF9644FDBA4112 /* Pods-photo-clash-sample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photo-clash-sample-resources.sh"; sourceTree = "<group>"; };
+		EB65AAB33490BD63CF4933477E2AE19D /* Pods-photo-clash-sampleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-photo-clash-sampleUITests.modulemap"; sourceTree = "<group>"; };
+		F0C8DE2F3AD532F9EA7A03E5D14F3E7D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F161361A33D0CF3D8749B60947C36F04 /* Pods-photo-clash-sample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-photo-clash-sample-dummy.m"; sourceTree = "<group>"; };
+		F4BA6DF1FE29A0E9BEA1803603149102 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		F69470B574B30A6FC3BD066A5C7A56B5 /* Pods-photo-clash-sampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-photo-clash-sampleUITests-dummy.m"; sourceTree = "<group>"; };
+		F8E945ABDCA7E3F9AA837BD21B71CC46 /* Pods-photo-clash-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photo-clash-sample.release.xcconfig"; sourceTree = "<group>"; };
+		FF5B21CBF5DB89B673856AF206F1C894 /* Pods_photo_clash_sampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_photo_clash_sampleUITests.framework; path = "Pods-photo-clash-sampleUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		004D49D88B563D6A5150937DADC1E660 /* Frameworks */ = {
+		3E923503E0BA6C3A7AEF15B9F65FCAAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB0FCAFC870B51E5FBD78C37B9FFFF1 /* Foundation.framework in Frameworks */,
+				AF4489226B7CD8054F8C9D5F96F4B83E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E6F35A98AE0CA4FF0D5E9C08769E3B3 /* Frameworks */ = {
+		62DAEAD601FD1D030A09398959D7784B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837C62DFFE49672DA7FA4EC47E469EAC /* Foundation.framework in Frameworks */,
+				D131D433E78CFB042CF3EC8BD9304AE8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79F858E5FEA5D1747CF1A0800AA98B68 /* Frameworks */ = {
+		7DB7C7883004CEF92CE1E6908864BB25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B292A19082835043E504F3B7BBCE9E5 /* Foundation.framework in Frameworks */,
+				6AC7901ACA5D7CECB8D019335C8954ED /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A049CFBB3F7AC810195BB585E133B44 /* Frameworks */ = {
+		F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F7107C495749BAACF89D77F32D232B3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5BC9928719E07C57FC3AE0527C4B342 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				834C06F071C731DE05B0F06522DFDE7C /* Foundation.framework in Frameworks */,
+				3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		54E1C7A4749A8A3E90888198F1F82297 /* Pods-PhotoClashUITests */ = {
+		061B1018A5B9F188E5A9D2908824288C /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0C645EAB52D90B673D5133B22C8D8B60 /* Info.plist */,
-				DA6A80CA0AD67BA3BA39B675A48B39D2 /* Pods-PhotoClashUITests.modulemap */,
-				A01BBC25B38C15A2443870D3B7ADB968 /* Pods-PhotoClashUITests-acknowledgements.markdown */,
-				EBBD88D138323D89E54A64746A9FD481 /* Pods-PhotoClashUITests-acknowledgements.plist */,
-				EDC9EBBAF430B2B3DB5D645A75180E94 /* Pods-PhotoClashUITests-dummy.m */,
-				1C28E6DD2662AC3A562B10E5A0211E8A /* Pods-PhotoClashUITests-frameworks.sh */,
-				9E8AB82C4D439EF902D1A3D277033FC8 /* Pods-PhotoClashUITests-resources.sh */,
-				DBE0E2428F8B107BE49204BEDECE7162 /* Pods-PhotoClashUITests-umbrella.h */,
-				4EF86C56D1B89AC46E9A16C24F7FA56F /* Pods-PhotoClashUITests.debug.xcconfig */,
-				839D2D4B67830C3B843BD95C60E79350 /* Pods-PhotoClashUITests.release.xcconfig */,
+				A6B7B85750D3F9DBE63F97EC0B5900B9 /* Pods-photo-clash-sample */,
+				94BB9F2DE6DC184AE55F7155C8AE41DA /* Pods-photo-clash-sampleTests */,
+				7A06B7B8AD9630339B13E5E090E993DE /* Pods-photo-clash-sampleUITests */,
 			);
-			name = "Pods-PhotoClashUITests";
-			path = "Target Support Files/Pods-PhotoClashUITests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		558F6A061555D6274B2F549854C0A390 /* Pods */ = {
+		11694D0058C6F6E8E08CA266AD1285E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD1F25723C30CD8CDF2B454D7B6171FD /* Info.plist */,
-				36BD066A4BA739A86101F0AC0766E309 /* Pods.modulemap */,
-				BFF497D8DBD4EA8EB314BCA46B7A02AC /* Pods-acknowledgements.markdown */,
-				0DA84A0BCBC26BCCF31F52AA5CA08BD1 /* Pods-acknowledgements.plist */,
-				9A485A976D70E797A0552116E2D119C4 /* Pods-dummy.m */,
-				6B1BCADDC84F07C964B3C89846F2ECF5 /* Pods-frameworks.sh */,
-				134C7100FFF0B0D5ADD5997189995FE8 /* Pods-resources.sh */,
-				621D9868B7C47D5D92F514D7C8B2A3A6 /* Pods-umbrella.h */,
-				48A998CC44FA06518E46764F87E08461 /* Pods.debug.xcconfig */,
-				0D0661B17865038AC3BA0ED1B2760A37 /* Pods.release.xcconfig */,
+				3A5CE4C3250E0E3A233B44417C51C32B /* FirebaseCore.framework */,
 			);
-			name = Pods;
-			path = "Target Support Files/Pods";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		634FD04952328062E50B021EEF2418AD /* Support Files */ = {
+		12EAE32E2839BFBC415F7566CF95AFBB /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				BA008F1C007E8807FF64BFC1362A4D6B /* Fusuma.modulemap */,
-				7253081D10D3D5883751DA0068EEE493 /* Fusuma.xcconfig */,
-				FFAE18599124DC703CCBF6577DE56716 /* Fusuma-dummy.m */,
-				F5E36BDF310760D1E6624D1ADCA87583 /* Fusuma-prefix.pch */,
-				C76C199A1A5705200C941C67310AF5E0 /* Fusuma-umbrella.h */,
-				A2BF07432A167300220D1BB9EE7584E5 /* Info.plist */,
+				3C11B24327DCA859F51CF1668C211D68 /* FIRInstanceID.h */,
+				181A71086EB9D9CA4B5AD46F1E275CDD /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		181A71086EB9D9CA4B5AD46F1E275CDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D48B278ED3B1FAE2133F48FAC325F12 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23FA9A582C978A551CD5E06C088ED3CF /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				11694D0058C6F6E8E08CA266AD1285E1 /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		3442BDD8A045E6455DD06D9760C724A4 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				5B272ECBC5206EB79C715670F53E3F18 /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		39749A69CF8260E2C5718A01BE373ECE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EC531D07875E84B3CBF56FE9E02931B /* GoogleToolboxForMac.framework */,
+				375B73A01D836C2429E1E6EDF32FD3D4 /* Pods_photo_clash_sample.framework */,
+				091DA41C39562AD3ADE39129F13B8565 /* Pods_photo_clash_sampleTests.framework */,
+				FF5B21CBF5DB89B673856AF206F1C894 /* Pods_photo_clash_sampleUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B7E4499FCB4021B32AC811764CDB508 /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				3442BDD8A045E6455DD06D9760C724A4 /* Defines */,
+				61CF4BAAE013DF8B0007735CDAD7C659 /* NSData+zlib */,
+				4CFEB72FCD954675E0BF88DE27251392 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		4CFEB72FCD954675E0BF88DE27251392 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25A132F1869837E9A760EEB488B5D44B /* GoogleToolboxForMac.modulemap */,
+				00D1CDDF771120776FDC8D96EA542EE6 /* GoogleToolboxForMac.xcconfig */,
+				410D9B4178C76FA5EDF8160F6514C971 /* GoogleToolboxForMac-dummy.m */,
+				D7A757F6AAE1DA46680D7802B30857A4 /* GoogleToolboxForMac-prefix.pch */,
+				39252B2E689B2B61AFE2AF50651B130C /* GoogleToolboxForMac-umbrella.h */,
+				F0C8DE2F3AD532F9EA7A03E5D14F3E7D /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Fusuma";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		5852E0E12FD142FD5B46C5CD973C8C15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBEF9555ABDC5D6ACB9DCB58763B04B4 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61CF4BAAE013DF8B0007735CDAD7C659 /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				69D49FCFB1469996E9BF2795DC070ACD /* GTMNSData+zlib.h */,
+				F4BA6DF1FE29A0E9BEA1803603149102 /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		6960BD0665A65D2B77A4EB34288B2D9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C88CEAD9913B6F15ACC765259A53796E /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		728F1DF19867C27C9AFBFBAB877C5075 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				BAC0B0732C703D4483E9E41179261975 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		77294A3095DD86741E1692D62E33E1BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				728F1DF19867C27C9AFBFBAB877C5075 /* Firebase */,
+				E3A34E1D8982976A7CD926B0E2364D16 /* FirebaseAnalytics */,
+				23FA9A582C978A551CD5E06C088ED3CF /* FirebaseCore */,
+				12EAE32E2839BFBC415F7566CF95AFBB /* FirebaseInstanceID */,
+				CE09658FF71C2EDAEA4A95E0579F933C /* GoogleInterchangeUtilities */,
+				C3D8CF558B907F378D137FEBD6CC55C1 /* GoogleSymbolUtilities */,
+				3B7E4499FCB4021B32AC811764CDB508 /* GoogleToolboxForMac */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A06B7B8AD9630339B13E5E090E993DE /* Pods-photo-clash-sampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				435B80EBC7AF7B21410145AC427E25D6 /* Info.plist */,
+				EB65AAB33490BD63CF4933477E2AE19D /* Pods-photo-clash-sampleUITests.modulemap */,
+				2A1C0A89E505CCD131E1BC8A3379D262 /* Pods-photo-clash-sampleUITests-acknowledgements.markdown */,
+				B27EAFEC61EBB16EEE8E6717EE78E554 /* Pods-photo-clash-sampleUITests-acknowledgements.plist */,
+				F69470B574B30A6FC3BD066A5C7A56B5 /* Pods-photo-clash-sampleUITests-dummy.m */,
+				82CAFF0687853FB914D526B44E5FBC40 /* Pods-photo-clash-sampleUITests-frameworks.sh */,
+				B80B2AAB7B1DA6E3A52FB199B1CACD6C /* Pods-photo-clash-sampleUITests-resources.sh */,
+				D9815EA409B434E343BFB72A7149B280 /* Pods-photo-clash-sampleUITests-umbrella.h */,
+				1029D93AA602F61BC2B4F71453625D08 /* Pods-photo-clash-sampleUITests.debug.xcconfig */,
+				B6AA8A418DEDFCB9CBC65584D4A1A9CC /* Pods-photo-clash-sampleUITests.release.xcconfig */,
+			);
+			name = "Pods-photo-clash-sampleUITests";
+			path = "Target Support Files/Pods-photo-clash-sampleUITests";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A62EE4F72D50D6A341782D3EC05C8D3D /* Pods */,
-				F47F604CB1DC2DD24BC25B882C477ACE /* Products */,
-				EFE5139B87D2CA2BCAA6EB84E18EEBBE /* Targets Support Files */,
+				77294A3095DD86741E1692D62E33E1BE /* Pods */,
+				39749A69CF8260E2C5718A01BE373ECE /* Products */,
+				061B1018A5B9F188E5A9D2908824288C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		997FD9578DEB6F3AEBB0D2F43C5E1269 /* Fusuma */ = {
+		94BB9F2DE6DC184AE55F7155C8AE41DA /* Pods-photo-clash-sampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8BD716438461F9C44A473E55C1BA39E /* FSAlbumView.swift */,
-				44CE3667932A9C65A8CB78A2C09DA7AB /* FSAlbumViewCell.swift */,
-				79DFC44AFE195F73155317D6DF9A1AB4 /* FSCameraView.swift */,
-				B4B749E25F5D04FB453503A7AB07DF99 /* FSConstants.swift */,
-				6F1B443A557971434C990E65B8A5AC33 /* FSImageCropView.swift */,
-				614C5C315C9F67A7A273F94BB4035A30 /* FSVideoCameraView.swift */,
-				6868F65959F4ECC606C4AA1D8BAA253B /* FusumaViewController.swift */,
-				D3DC395A4647C206EF0800F672222A2C /* Resources */,
-				634FD04952328062E50B021EEF2418AD /* Support Files */,
+				AB3AE2D42055DA58666A4EB51B1BC481 /* Info.plist */,
+				A49CBFC48284E8A6213E23B7E9139968 /* Pods-photo-clash-sampleTests.modulemap */,
+				B248E58D830404EFC4CBFE5F8B2468C6 /* Pods-photo-clash-sampleTests-acknowledgements.markdown */,
+				952BF282E3B46DA9B11CDC56A38F0EF6 /* Pods-photo-clash-sampleTests-acknowledgements.plist */,
+				309F9E0752F5870460EBEE82E65067D5 /* Pods-photo-clash-sampleTests-dummy.m */,
+				D91FD68D9942B9E0DF3619669F85E26F /* Pods-photo-clash-sampleTests-frameworks.sh */,
+				596520D8C90D6BCA3B3DE0C901005D9C /* Pods-photo-clash-sampleTests-resources.sh */,
+				6A3FC8F52AA6F69BCFC43DBAFD7A34D6 /* Pods-photo-clash-sampleTests-umbrella.h */,
+				DD93EFD962BB4EEC988A3F96A2119904 /* Pods-photo-clash-sampleTests.debug.xcconfig */,
+				DD1717963709661C34AB6DBF64F837A3 /* Pods-photo-clash-sampleTests.release.xcconfig */,
 			);
-			path = Fusuma;
+			name = "Pods-photo-clash-sampleTests";
+			path = "Target Support Files/Pods-photo-clash-sampleTests";
 			sourceTree = "<group>";
 		};
-		A62EE4F72D50D6A341782D3EC05C8D3D /* Pods */ = {
+		A6B7B85750D3F9DBE63F97EC0B5900B9 /* Pods-photo-clash-sample */ = {
 			isa = PBXGroup;
 			children = (
-				997FD9578DEB6F3AEBB0D2F43C5E1269 /* Fusuma */,
+				C80140D22B9BE00CFD1707BCD1FA038B /* Info.plist */,
+				89EEA81C10BBA595170D096EE7891FC1 /* Pods-photo-clash-sample.modulemap */,
+				E12E88E51A0B841C5AEDC9DA6E4EA02A /* Pods-photo-clash-sample-acknowledgements.markdown */,
+				11A4499510AD215427DABEB71A05C708 /* Pods-photo-clash-sample-acknowledgements.plist */,
+				F161361A33D0CF3D8749B60947C36F04 /* Pods-photo-clash-sample-dummy.m */,
+				9FE1022FF32E9AC05F1BA7E3034A9AC4 /* Pods-photo-clash-sample-frameworks.sh */,
+				E20721D2E16BB97C91BF9644FDBA4112 /* Pods-photo-clash-sample-resources.sh */,
+				433AFBAA51F6A150D31323D5561B9748 /* Pods-photo-clash-sample-umbrella.h */,
+				387D88176DA69ACE38CDCF12A16208B5 /* Pods-photo-clash-sample.debug.xcconfig */,
+				F8E945ABDCA7E3F9AA837BD21B71CC46 /* Pods-photo-clash-sample.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Pods-photo-clash-sample";
+			path = "Target Support Files/Pods-photo-clash-sample";
 			sourceTree = "<group>";
 		};
-		AF55C8A2C010C258D07C41CD8E75E24A /* Pods-PhotoClash */ = {
+		BAC0B0732C703D4483E9E41179261975 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				7416758246158C9BB7DD442B50F13A5F /* Info.plist */,
-				3044D96E79E00F0C24101C72EAED2966 /* Pods-PhotoClash.modulemap */,
-				0958BC4087718CA66E520B1A2717A1B3 /* Pods-PhotoClash-acknowledgements.markdown */,
-				050CE1BA09F1D781478120B136C03CE8 /* Pods-PhotoClash-acknowledgements.plist */,
-				C10D18EC1D01F313902D74C129411120 /* Pods-PhotoClash-dummy.m */,
-				1A97B1954CD96309E95E2200E4258678 /* Pods-PhotoClash-frameworks.sh */,
-				6E2FD34684C1EE98BE5EF547A57061D1 /* Pods-PhotoClash-resources.sh */,
-				A8BBDDED97F2A83AC29142D89AC1D3C9 /* Pods-PhotoClash-umbrella.h */,
-				7272F077D9C1A0DA3736C19D70E4C8BC /* Pods-PhotoClash.debug.xcconfig */,
-				A970EDA4DD43544C612ACD4FBFCC43AD /* Pods-PhotoClash.release.xcconfig */,
+				2849118E66F8FB23260AFEB06402A6D0 /* Firebase.h */,
 			);
-			name = "Pods-PhotoClash";
-			path = "Target Support Files/Pods-PhotoClash";
+			name = Core;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+		C3D8CF558B907F378D137FEBD6CC55C1 /* GoogleSymbolUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+				6960BD0665A65D2B77A4EB34288B2D9F /* Frameworks */,
 			);
-			name = iOS;
+			name = GoogleSymbolUtilities;
+			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
-		D3DC395A4647C206EF0800F672222A2C /* Resources */ = {
+		CE09658FF71C2EDAEA4A95E0579F933C /* GoogleInterchangeUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				427FDC4E6130005591A94B287587AC3B /* Assets.xcassets */,
-				D85845D4FCEF0FBFACBA02ED26D78942 /* FSAlbumView.xib */,
-				2F9E400F4EBB40F53F48F01359FD2AAD /* FSAlbumViewCell.xib */,
-				ABF778C0F45E2022CBE3AA9BFF36176C /* FSCameraView.xib */,
-				4762C86774178F707DCE9F3ABA2DFDF5 /* FSVideoCameraView.xib */,
-				AB54CCB79E3F33C1BEE9C023741D3B8F /* FusumaViewController.xib */,
+				5852E0E12FD142FD5B46C5CD973C8C15 /* Frameworks */,
 			);
-			name = Resources;
+			name = GoogleInterchangeUtilities;
+			path = GoogleInterchangeUtilities;
 			sourceTree = "<group>";
 		};
-		EFE5139B87D2CA2BCAA6EB84E18EEBBE /* Targets Support Files */ = {
+		E3A34E1D8982976A7CD926B0E2364D16 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				558F6A061555D6274B2F549854C0A390 /* Pods */,
-				AF55C8A2C010C258D07C41CD8E75E24A /* Pods-PhotoClash */,
-				FEB63EC79C9F380BD09F582D3788DC09 /* Pods-PhotoClashTests */,
-				54E1C7A4749A8A3E90888198F1F82297 /* Pods-PhotoClashUITests */,
+				F9B96C77E21B1A9EE878033087FA1BE7 /* Frameworks */,
 			);
-			name = "Targets Support Files";
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
-		F47F604CB1DC2DD24BC25B882C477ACE /* Products */ = {
+		F9B96C77E21B1A9EE878033087FA1BE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				00B6FA8117167B2164D1BB7851EC29A9 /* Fusuma.framework */,
-				1D264832934419DA9AA8BC27A16CE4CE /* Pods.framework */,
-				1561DB37BDB39CF6E474A7422DEAB3B0 /* Pods_PhotoClash.framework */,
-				99F463C118ED49CF7C0244F149A34B30 /* Pods_PhotoClashTests.framework */,
-				5ABC17730A5C9D14AAC7B4FE5B7F3469 /* Pods_PhotoClashUITests.framework */,
+				C513DE6CEE1AAD23EFE32FEA6B6B6B9C /* FirebaseAnalytics.framework */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FEB63EC79C9F380BD09F582D3788DC09 /* Pods-PhotoClashTests */ = {
-			isa = PBXGroup;
-			children = (
-				EA797B7EF4C56A66C65186CC2108D372 /* Info.plist */,
-				C5D959A43FD51BC494142E7BDAC01D6A /* Pods-PhotoClashTests.modulemap */,
-				11EC8D51F560C395097AD538A302FF81 /* Pods-PhotoClashTests-acknowledgements.markdown */,
-				3BE819D210ACC52FF126D31695666B78 /* Pods-PhotoClashTests-acknowledgements.plist */,
-				42EEF12E293DFD7073E3B9C8C62F5D4D /* Pods-PhotoClashTests-dummy.m */,
-				32AF56365FD134CDF2AADFECE269F2F9 /* Pods-PhotoClashTests-frameworks.sh */,
-				59D2C79DFCEAC0A0CAACAC7B09DDC8EC /* Pods-PhotoClashTests-resources.sh */,
-				11F5AFC3002978997758C69573F1DAC6 /* Pods-PhotoClashTests-umbrella.h */,
-				4166C8AFB82F79D47F599A227A895840 /* Pods-PhotoClashTests.debug.xcconfig */,
-				0339E8FCC0E99AB55EE9B80A4C010EA4 /* Pods-PhotoClashTests.release.xcconfig */,
-			);
-			name = "Pods-PhotoClashTests";
-			path = "Target Support Files/Pods-PhotoClashTests";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2B83538DB0279831FA2B49ACF115532F /* Headers */ = {
+		7257046EA73260A895B14E52D05792B0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC274C06102076CF4A463FF7B1D09A63 /* Pods-PhotoClashUITests-umbrella.h in Headers */,
+				7484A907FADAB5DF0DF92B482BF43717 /* Pods-photo-clash-sampleUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3162114547C10961F965289A6556585D /* Headers */ = {
+		D686EC046C3871A4C0B83DA979C2A8BF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991635042381BCCA4F3CF4BB68B9DF71 /* Pods-PhotoClash-umbrella.h in Headers */,
+				7275EFBD4848CB4B9B23F041FEBFD8D0 /* Pods-photo-clash-sample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		603A5C98186EC1A0FC568EEAD787BBAF /* Headers */ = {
+		E55601A447E47AD19B59D53F91A4B084 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA01B8E4C4B5526D30CF5B1E42D48A4 /* Pods-umbrella.h in Headers */,
+				E5D2A0AE91EEC3AFAD886142E930F4FF /* Pods-photo-clash-sampleTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC0CA34826A75E81ABAB7ECD048F311F /* Headers */ = {
+		FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7D52093D7BF8222BAC6102AEF5A0F15 /* Fusuma-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D942C88D62A05AE04DF1576981547AD2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E3DA0426CA9B1EFE0A6B9C871DA20D3 /* Pods-PhotoClashTests-umbrella.h in Headers */,
+				81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */,
+				DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		05528F94B01211DF0EC7B41C8DD44A41 /* Pods-PhotoClash */ = {
+		00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7541B527E0D2BAE63CB4F2240B324BE5 /* Build configuration list for PBXNativeTarget "Pods-PhotoClash" */;
+			buildConfigurationList = C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
 			buildPhases = (
-				786EA5A1AB6FAE520C96C9BC7AE1A378 /* Sources */,
-				6E6F35A98AE0CA4FF0D5E9C08769E3B3 /* Frameworks */,
-				3162114547C10961F965289A6556585D /* Headers */,
+				63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */,
+				F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */,
+				FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0173CE86B0519F3BC894F2F7C7A60A80 /* PBXTargetDependency */,
 			);
-			name = "Pods-PhotoClash";
-			productName = "Pods-PhotoClash";
-			productReference = 1561DB37BDB39CF6E474A7422DEAB3B0 /* Pods_PhotoClash.framework */;
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = 5EC531D07875E84B3CBF56FE9E02931B /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7380ABD049E12DCFEC9B9E1D2D52C627 /* Fusuma */ = {
+		0DC9F59D51B0678B9992694B9F1A1E5B /* Pods-photo-clash-sample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A16F84FE8A33AD2E1D0F3FC56124A9EA /* Build configuration list for PBXNativeTarget "Fusuma" */;
+			buildConfigurationList = 286A1B45F151EEDC88E12A131FA4A7E2 /* Build configuration list for PBXNativeTarget "Pods-photo-clash-sample" */;
 			buildPhases = (
-				E99F9FF0946BB3F7E248B5801BC350D7 /* Sources */,
-				004D49D88B563D6A5150937DADC1E660 /* Frameworks */,
-				0250727F87F46243677C2DC7E626E43F /* Resources */,
-				BC0CA34826A75E81ABAB7ECD048F311F /* Headers */,
+				F0EB3DE427627182F3081326E64074FF /* Sources */,
+				7DB7C7883004CEF92CE1E6908864BB25 /* Frameworks */,
+				D686EC046C3871A4C0B83DA979C2A8BF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				36C884E486F8FA7AAEFCFC488FA01CB2 /* PBXTargetDependency */,
 			);
-			name = Fusuma;
-			productName = Fusuma;
-			productReference = 00B6FA8117167B2164D1BB7851EC29A9 /* Fusuma.framework */;
+			name = "Pods-photo-clash-sample";
+			productName = "Pods-photo-clash-sample";
+			productReference = 375B73A01D836C2429E1E6EDF32FD3D4 /* Pods_photo_clash_sample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AA9169D30CEBFB940CC6503D6B4947D9 /* Pods */ = {
+		76FCA8C1B2331949F59381449C227570 /* Pods-photo-clash-sampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C47F932D02AE1FCD0F831D443E322739 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 4CD66341965ECE689F8D2756E7C81739 /* Build configuration list for PBXNativeTarget "Pods-photo-clash-sampleUITests" */;
 			buildPhases = (
-				9E24EB3EB044F6E742C2B6DA00623C41 /* Sources */,
-				79F858E5FEA5D1747CF1A0800AA98B68 /* Frameworks */,
-				603A5C98186EC1A0FC568EEAD787BBAF /* Headers */,
+				A1B6530374BC06FFCB7484E886B428EC /* Sources */,
+				62DAEAD601FD1D030A09398959D7784B /* Frameworks */,
+				7257046EA73260A895B14E52D05792B0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A432C9B8007DE7BBCA920E9BE7B400F5 /* PBXTargetDependency */,
+				1596033260C3D5A2ED9241B674BC345A /* PBXTargetDependency */,
 			);
-			name = Pods;
-			productName = Pods;
-			productReference = 1D264832934419DA9AA8BC27A16CE4CE /* Pods.framework */;
+			name = "Pods-photo-clash-sampleUITests";
+			productName = "Pods-photo-clash-sampleUITests";
+			productReference = FF5B21CBF5DB89B673856AF206F1C894 /* Pods_photo_clash_sampleUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C68E0CA990368A65E157D2D8A9E3CFBA /* Pods-PhotoClashTests */ = {
+		FFF027FFFD6E5B63A72B55427312F123 /* Pods-photo-clash-sampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0323BA74DD053E8C2BB8180D0A7D903F /* Build configuration list for PBXNativeTarget "Pods-PhotoClashTests" */;
+			buildConfigurationList = 8502662BB9817D7238C1731450992339 /* Build configuration list for PBXNativeTarget "Pods-photo-clash-sampleTests" */;
 			buildPhases = (
-				335AF4263C42BAB6DBF4641A36764DBD /* Sources */,
-				7A049CFBB3F7AC810195BB585E133B44 /* Frameworks */,
-				D942C88D62A05AE04DF1576981547AD2 /* Headers */,
+				D51FFF54162374529E50750ED4082254 /* Sources */,
+				3E923503E0BA6C3A7AEF15B9F65FCAAE /* Frameworks */,
+				E55601A447E47AD19B59D53F91A4B084 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1515B00CE458F6AA7F229DBFB63BE0BE /* PBXTargetDependency */,
+				D8999801F742A77384C3A015164BE8C4 /* PBXTargetDependency */,
 			);
-			name = "Pods-PhotoClashTests";
-			productName = "Pods-PhotoClashTests";
-			productReference = 99F463C118ED49CF7C0244F149A34B30 /* Pods_PhotoClashTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EB91BEB0CA646D356953FDC8041ED79A /* Pods-PhotoClashUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC1F5424EC55F9DB212E846694C3005C /* Build configuration list for PBXNativeTarget "Pods-PhotoClashUITests" */;
-			buildPhases = (
-				93B6047E7D0F9C1CF720200B8AF413BA /* Sources */,
-				D5BC9928719E07C57FC3AE0527C4B342 /* Frameworks */,
-				2B83538DB0279831FA2B49ACF115532F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B1C9391EB13F37C871DAE7238F605F3C /* PBXTargetDependency */,
-			);
-			name = "Pods-PhotoClashUITests";
-			productName = "Pods-PhotoClashUITests";
-			productReference = 5ABC17730A5C9D14AAC7B4FE5B7F3469 /* Pods_PhotoClashUITests.framework */;
+			name = "Pods-photo-clash-sampleTests";
+			productName = "Pods-photo-clash-sampleTests";
+			productReference = 091DA41C39562AD3ADE39129F13B8565 /* Pods_photo_clash_sampleTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -496,16 +517,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					7380ABD049E12DCFEC9B9E1D2D52C627 = {
-						LastSwiftMigration = 0810;
-					};
-					AA9169D30CEBFB940CC6503D6B4947D9 = {
-						LastSwiftMigration = 0810;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -515,148 +528,81 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F47F604CB1DC2DD24BC25B882C477ACE /* Products */;
+			productRefGroup = 39749A69CF8260E2C5718A01BE373ECE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7380ABD049E12DCFEC9B9E1D2D52C627 /* Fusuma */,
-				AA9169D30CEBFB940CC6503D6B4947D9 /* Pods */,
-				05528F94B01211DF0EC7B41C8DD44A41 /* Pods-PhotoClash */,
-				C68E0CA990368A65E157D2D8A9E3CFBA /* Pods-PhotoClashTests */,
-				EB91BEB0CA646D356953FDC8041ED79A /* Pods-PhotoClashUITests */,
+				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
+				0DC9F59D51B0678B9992694B9F1A1E5B /* Pods-photo-clash-sample */,
+				FFF027FFFD6E5B63A72B55427312F123 /* Pods-photo-clash-sampleTests */,
+				76FCA8C1B2331949F59381449C227570 /* Pods-photo-clash-sampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		0250727F87F46243677C2DC7E626E43F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC68615DFB9CDA3638AAEC704CD95DDB /* Assets.xcassets in Resources */,
-				3A5D2E073DC2AD156588C20ECF6D6E87 /* FSAlbumView.xib in Resources */,
-				B01A5420F84E59C6F3173C0E1F4EB6F6 /* FSAlbumViewCell.xib in Resources */,
-				8681BBA9F17474482885383595964319 /* FSCameraView.xib in Resources */,
-				7625DD466CF3049067583B579D1FF1A1 /* FSVideoCameraView.xib in Resources */,
-				6675F4809C5215D98FAFCBAE8C2EF2D5 /* FusumaViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		335AF4263C42BAB6DBF4641A36764DBD /* Sources */ = {
+		63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244C7FC70B4B65CC8CC9EE2C8FC0B9EE /* Pods-PhotoClashTests-dummy.m in Sources */,
+				FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */,
+				F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		786EA5A1AB6FAE520C96C9BC7AE1A378 /* Sources */ = {
+		A1B6530374BC06FFCB7484E886B428EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A015022EA3075AD36B3D01108710266 /* Pods-PhotoClash-dummy.m in Sources */,
+				7AB7171A7E08054898AE2CF33FD3BA8D /* Pods-photo-clash-sampleUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93B6047E7D0F9C1CF720200B8AF413BA /* Sources */ = {
+		D51FFF54162374529E50750ED4082254 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3596F29AB03F646E7F716F187993FB28 /* Pods-PhotoClashUITests-dummy.m in Sources */,
+				6A37253571EDF7F804854C507D994511 /* Pods-photo-clash-sampleTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9E24EB3EB044F6E742C2B6DA00623C41 /* Sources */ = {
+		F0EB3DE427627182F3081326E64074FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E93AEFD2F0D64CBCB965979ED7957354 /* Pods-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E99F9FF0946BB3F7E248B5801BC350D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E94FE07869E7F28CAF4AE9208CA3C3A2 /* FSAlbumView.swift in Sources */,
-				41125D861C951E721D536EF9358E3549 /* FSAlbumViewCell.swift in Sources */,
-				9889C3CB27F58FF8E7677F56F637ED21 /* FSCameraView.swift in Sources */,
-				20B9F03D6CB512A896CF681A2D8B5203 /* FSConstants.swift in Sources */,
-				0A4E00C48BB150B268BA3DF229D935F7 /* FSImageCropView.swift in Sources */,
-				9E6039187937B59F54618466C1DFCCDE /* FSVideoCameraView.swift in Sources */,
-				4425298C494DA38EA21CE37C52EC44E6 /* Fusuma-dummy.m in Sources */,
-				3A2F78316CF8E309322F667644E6197D /* FusumaViewController.swift in Sources */,
+				267D3C5D29FD843CE814F54D10386483 /* Pods-photo-clash-sample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0173CE86B0519F3BC894F2F7C7A60A80 /* PBXTargetDependency */ = {
+		1596033260C3D5A2ED9241B674BC345A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Fusuma;
-			target = 7380ABD049E12DCFEC9B9E1D2D52C627 /* Fusuma */;
-			targetProxy = 7131525CABCA8CD4DFE291A054F64212 /* PBXContainerItemProxy */;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = D0A3A2254A61FE2C39DBD6516BA4C356 /* PBXContainerItemProxy */;
 		};
-		1515B00CE458F6AA7F229DBFB63BE0BE /* PBXTargetDependency */ = {
+		36C884E486F8FA7AAEFCFC488FA01CB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Fusuma;
-			target = 7380ABD049E12DCFEC9B9E1D2D52C627 /* Fusuma */;
-			targetProxy = 63AE144E10F1F87F4980C3D3ADD6C952 /* PBXContainerItemProxy */;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = ABFE1F3977F03E7FB739A4AD8D04E0B0 /* PBXContainerItemProxy */;
 		};
-		A432C9B8007DE7BBCA920E9BE7B400F5 /* PBXTargetDependency */ = {
+		D8999801F742A77384C3A015164BE8C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Fusuma;
-			target = 7380ABD049E12DCFEC9B9E1D2D52C627 /* Fusuma */;
-			targetProxy = 4E0B47A240A7F86A39B0C9DD8E2EE0F5 /* PBXContainerItemProxy */;
-		};
-		B1C9391EB13F37C871DAE7238F605F3C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Fusuma;
-			target = 7380ABD049E12DCFEC9B9E1D2D52C627 /* Fusuma */;
-			targetProxy = D1E4C91E9CD97AB399B27BC20C185217 /* PBXContainerItemProxy */;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = A414DA47BD772232E0D21D8A6FB4A6BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		149BC247FD593EE3A496F722102DA7A6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EF86C56D1B89AC46E9A16C24F7FA56F /* Pods-PhotoClashUITests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PhotoClashUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhotoClashUITests/Pods-PhotoClashUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PhotoClashUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2B389FAB51F6EEA43F72CA7BDC8E8E28 /* Debug */ = {
+		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -670,11 +616,14 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -687,62 +636,39 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		329F7E4D0E86E9312AE6147412536484 /* Debug */ = {
+		1FEDB64BCE9E754618060166DFC84A81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7253081D10D3D5883751DA0068EEE493 /* Fusuma.xcconfig */;
+			baseConfigurationReference = DD1717963709661C34AB6DBF64F837A3 /* Pods-photo-clash-sampleTests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Fusuma/Fusuma-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Fusuma/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Fusuma/Fusuma.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Fusuma;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4CE2B63471E4E0CD93E96F8FC8CA0C8B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A970EDA4DD43544C612ACD4FBFCC43AD /* Pods-PhotoClash.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PhotoClash/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-photo-clash-sampleTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhotoClash/Pods-PhotoClash.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-photo-clash-sampleTests/Pods-photo-clash-sampleTests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PhotoClash;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_photo_clash_sampleTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,10 +677,81 @@
 			};
 			name = Release;
 		};
-		5A0C6FE968931D888F00C9EC18DDF5BC /* Release */ = {
+		22E89456FB5B5D17169B83E4F53D29E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6AA8A418DEDFCB9CBC65584D4A1A9CC /* Pods-photo-clash-sampleUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-photo-clash-sampleUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-photo-clash-sampleUITests/Pods-photo-clash-sampleUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_photo_clash_sampleUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A31EFFB0387E58616994C06A5D83CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E945ABDCA7E3F9AA837BD21B71CC46 /* Pods-photo-clash-sample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-photo-clash-sample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-photo-clash-sample/Pods-photo-clash-sample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_photo_clash_sample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -768,10 +765,14 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -779,31 +780,138 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		5B1084109C6D2D83DC3F73270E44D147 /* Release */ = {
+		9315212F185B6574450F8848F18FE4BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7253081D10D3D5883751DA0068EEE493 /* Fusuma.xcconfig */;
+			baseConfigurationReference = DD93EFD962BB4EEC988A3F96A2119904 /* Pods-photo-clash-sampleTests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Fusuma/Fusuma-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Fusuma/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-photo-clash-sampleTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Fusuma/Fusuma.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-photo-clash-sampleTests/Pods-photo-clash-sampleTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_photo_clash_sampleTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B290EE303BCE54E5FFD33C60F60F1CC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 387D88176DA69ACE38CDCF12A16208B5 /* Pods-photo-clash-sample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-photo-clash-sample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-photo-clash-sample/Pods-photo-clash-sample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_photo_clash_sample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D60CD877A708870E2BE96B83BA32F883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D1CDDF771120776FDC8D96EA542EE6 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F066921CBDBDB5F45795E50FBC5AC972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D1CDDF771120776FDC8D96EA542EE6 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Fusuma;
+				PRODUCT_NAME = GoogleToolboxForMac;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -813,199 +921,49 @@
 			};
 			name = Release;
 		};
-		6431F38ABAA5D4E5BCFB42FAEA4283A2 /* Release */ = {
+		FAA9B8E9C93E2423C708CD22E6D1A816 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 839D2D4B67830C3B843BD95C60E79350 /* Pods-PhotoClashUITests.release.xcconfig */;
+			baseConfigurationReference = 1029D93AA602F61BC2B4F71453625D08 /* Pods-photo-clash-sampleUITests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PhotoClashUITests/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-photo-clash-sampleUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhotoClashUITests/Pods-PhotoClashUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PhotoClashUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9FE67A5294FB9153221EADF3FA984983 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D0661B17865038AC3BA0ED1B2760A37 /* Pods.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A6C92EE5F56CC4E039B098321858C367 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48A998CC44FA06518E46764F87E08461 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-photo-clash-sampleUITests/Pods-photo-clash-sampleUITests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_photo_clash_sampleUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		D949E02115612E6D5D5BE67EDA091687 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4166C8AFB82F79D47F599A227A895840 /* Pods-PhotoClashTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PhotoClashTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhotoClashTests/Pods-PhotoClashTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PhotoClashTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DD5C13BEF2871DA0DDF0855ED9D2AC9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7272F077D9C1A0DA3736C19D70E4C8BC /* Pods-PhotoClash.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PhotoClash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhotoClash/Pods-PhotoClash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PhotoClash;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ED4D0EA0A714D838AC02D91657C16BB7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0339E8FCC0E99AB55EE9B80A4C010EA4 /* Pods-PhotoClashTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PhotoClashTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhotoClashTests/Pods-PhotoClashTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PhotoClashTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0323BA74DD053E8C2BB8180D0A7D903F /* Build configuration list for PBXNativeTarget "Pods-PhotoClashTests" */ = {
+		286A1B45F151EEDC88E12A131FA4A7E2 /* Build configuration list for PBXNativeTarget "Pods-photo-clash-sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D949E02115612E6D5D5BE67EDA091687 /* Debug */,
-				ED4D0EA0A714D838AC02D91657C16BB7 /* Release */,
+				B290EE303BCE54E5FFD33C60F60F1CC8 /* Debug */,
+				4A31EFFB0387E58616994C06A5D83CAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1013,44 +971,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B389FAB51F6EEA43F72CA7BDC8E8E28 /* Debug */,
-				5A0C6FE968931D888F00C9EC18DDF5BC /* Release */,
+				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
+				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7541B527E0D2BAE63CB4F2240B324BE5 /* Build configuration list for PBXNativeTarget "Pods-PhotoClash" */ = {
+		4CD66341965ECE689F8D2756E7C81739 /* Build configuration list for PBXNativeTarget "Pods-photo-clash-sampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD5C13BEF2871DA0DDF0855ED9D2AC9F /* Debug */,
-				4CE2B63471E4E0CD93E96F8FC8CA0C8B /* Release */,
+				FAA9B8E9C93E2423C708CD22E6D1A816 /* Debug */,
+				22E89456FB5B5D17169B83E4F53D29E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A16F84FE8A33AD2E1D0F3FC56124A9EA /* Build configuration list for PBXNativeTarget "Fusuma" */ = {
+		8502662BB9817D7238C1731450992339 /* Build configuration list for PBXNativeTarget "Pods-photo-clash-sampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				329F7E4D0E86E9312AE6147412536484 /* Debug */,
-				5B1084109C6D2D83DC3F73270E44D147 /* Release */,
+				9315212F185B6574450F8848F18FE4BF /* Debug */,
+				1FEDB64BCE9E754618060166DFC84A81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC1F5424EC55F9DB212E846694C3005C /* Build configuration list for PBXNativeTarget "Pods-PhotoClashUITests" */ = {
+		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				149BC247FD593EE3A496F722102DA7A6 /* Debug */,
-				6431F38ABAA5D4E5BCFB42FAEA4283A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C47F932D02AE1FCD0F831D443E322739 /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A6C92EE5F56CC4E039B098321858C367 /* Debug */,
-				9FE67A5294FB9153221EADF3FA984983 /* Release */,
+				D60CD877A708870E2BE96B83BA32F883 /* Debug */,
+				F066921CBDBDB5F45795E50FBC5AC972 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

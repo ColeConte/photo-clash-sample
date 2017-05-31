@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E031DF11D3EDF5A00EA9AE4 /* FusumaContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E031DF01D3EDF5A00EA9AE4 /* FusumaContainerViewController.swift */; };
-		0E031DF31D3EE56E00EA9AE4 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E031DF21D3EE56E00EA9AE4 /* EditPhotoViewController.swift */; };
 		0E031DF51D3EEC5400EA9AE4 /* ic_close_white_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E031DF41D3EEC5400EA9AE4 /* ic_close_white_48pt.png */; };
 		0E0E10951D627A2800A573CE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0E10941D627A2800A573CE /* FBSDKCoreKit.framework */; };
 		0E0E10971D627A3200A573CE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0E10961D627A3200A573CE /* FBSDKLoginKit.framework */; };
@@ -36,6 +34,9 @@
 		0E3BBCC51D7616C8004F90CC /* noUser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E3BBCC41D7616C8004F90CC /* noUser.jpg */; };
 		0E506A8F1D6F4D2500A6019E /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E506A8E1D6F4D2500A6019E /* UserProfileViewController.swift */; };
 		0E506A911D73612600A6019E /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E506A901D73612600A6019E /* FriendsTableViewController.swift */; };
+		0E7175DE1E1C8EA200316363 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7175DD1E1C8EA200316363 /* GoogleService-Info.plist */; };
+		0E7175DF1E1C8EA200316363 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7175DD1E1C8EA200316363 /* GoogleService-Info.plist */; };
+		0E7175E01E1C8EA200316363 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7175DD1E1C8EA200316363 /* GoogleService-Info.plist */; };
 		0E76590A1DA8326000EABDB7 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */; };
 		0E76590C1DA8395300EABDB7 /* ClashCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76590B1DA8395300EABDB7 /* ClashCell.swift */; };
 		0E7659101DABF42C00EABDB7 /* BlurrableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76590F1DABF42C00EABDB7 /* BlurrableCollectionView.swift */; };
@@ -57,7 +58,6 @@
 		0EE725EB1D6CC9110040423F /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE725EA1D6CC9110040423F /* SuggestionCell.swift */; };
 		0EE725ED1D6CD5D60040423F /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE725EC1D6CD5D60040423F /* PreviewViewController.swift */; };
 		0EEE6ED81D38262E00B0094E /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE6ED71D38262E00B0094E /* MainFeedViewController.swift */; };
-		35BE62098B07F04401333328 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED536794A09852671179BA13 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E031DF01D3EDF5A00EA9AE4 /* FusumaContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaContainerViewController.swift; sourceTree = "<group>"; };
-		0E031DF21D3EE56E00EA9AE4 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
+		0DC1A33B7741AA60D6076E2C /* Pods-photo-clash-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photo-clash-sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photo-clash-sample/Pods-photo-clash-sample.debug.xcconfig"; sourceTree = "<group>"; };
 		0E031DF41D3EEC5400EA9AE4 /* ic_close_white_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_close_white_48pt.png; sourceTree = "<group>"; };
 		0E0E10941D627A2800A573CE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		0E0E10961D627A3200A573CE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -107,21 +106,22 @@
 		0E3BBCC41D7616C8004F90CC /* noUser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noUser.jpg; sourceTree = "<group>"; };
 		0E506A8E1D6F4D2500A6019E /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		0E506A901D73612600A6019E /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		0E7175DD1E1C8EA200316363 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E7659091DA8326000EABDB7 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		0E76590B1DA8395300EABDB7 /* ClashCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClashCell.swift; sourceTree = "<group>"; };
 		0E76590F1DABF42C00EABDB7 /* BlurrableCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurrableCollectionView.swift; sourceTree = "<group>"; };
 		0E7659111DAE9E1C00EABDB7 /* WhiteRhino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteRhino.png; sourceTree = "<group>"; };
 		0E81056F1DCCF6DF00C0D4D4 /* PhotoClash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoClash.entitlements; sourceTree = "<group>"; };
-		0EB57EC81CF778AD00E30272 /* PhotoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB57EC81CF778AD00E30272 /* photo-clash-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "photo-clash-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB57ECB1CF778AD00E30272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB57ED01CF778AD00E30272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EB57ED21CF778AD00E30272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EB57ED51CF778AD00E30272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EB57ED71CF778AD00E30272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EB57EDC1CF778AD00E30272 /* PhotoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB57EDC1CF778AD00E30272 /* photo-clash-sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "photo-clash-sampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB57EE01CF778AD00E30272 /* PhotoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClashTests.swift; sourceTree = "<group>"; };
 		0EB57EE21CF778AD00E30272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EB57EE71CF778AD00E30272 /* PhotoClashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoClashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB57EE71CF778AD00E30272 /* photo-clash-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "photo-clash-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB57EEB1CF778AD00E30272 /* PhotoClashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClashUITests.swift; sourceTree = "<group>"; };
 		0EB57EED1CF778AD00E30272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EBD51191D3830480006C125 /* CurrentClashTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentClashTableViewCell.swift; sourceTree = "<group>"; };
@@ -135,9 +135,11 @@
 		0EE725EA1D6CC9110040423F /* SuggestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
 		0EE725EC1D6CD5D60040423F /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		0EEE6ED71D38262E00B0094E /* MainFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
-		BA0E035FDF1FB2F157EBCA3A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		ED536794A09852671179BA13 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F055E2AA5B266559135FE9A1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		36DC2E321546257483C72649 /* Pods-photo-clash-sampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photo-clash-sampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photo-clash-sampleTests/Pods-photo-clash-sampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A16E656A6ECEFD4E3BA1517 /* Pods-photo-clash-sampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photo-clash-sampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-photo-clash-sampleTests/Pods-photo-clash-sampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		BC2578297246E9A955B53FE8 /* Pods-photo-clash-sampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photo-clash-sampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-photo-clash-sampleUITests/Pods-photo-clash-sampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F7DB7686B47654F5A5DC9295 /* Pods-photo-clash-sampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photo-clash-sampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photo-clash-sampleUITests/Pods-photo-clash-sampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F8B36729D6F9681DBF079409 /* Pods-photo-clash-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photo-clash-sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-photo-clash-sample/Pods-photo-clash-sample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +155,6 @@
 				0E0E10971D627A3200A573CE /* FBSDKLoginKit.framework in Frameworks */,
 				0E0E109D1D627BB600A573CE /* Bolts.framework in Frameworks */,
 				0E198A961D380ADB00F25F53 /* CoreLocation.framework in Frameworks */,
-				35BE62098B07F04401333328 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +181,6 @@
 				0E321BC61D62790100D9E215 /* FBSDKShareKit.framework */,
 				0E321BC41D6278F900D9E215 /* FBSDKLoginKit.framework */,
 				0E321BC21D6278F100D9E215 /* FBSDKCoreKit.framework */,
-				ED536794A09852671179BA13 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,17 +197,17 @@
 				0EB57EDF1CF778AD00E30272 /* PhotoClashTests */,
 				0EB57EEA1CF778AD00E30272 /* PhotoClashUITests */,
 				0EB57EC91CF778AD00E30272 /* Products */,
-				54B133A8213371653274AEE6 /* Pods */,
 				05CE3F52D40C3DD5ACBD8AEE /* Frameworks */,
+				DD7E993E95FAF06773703C8B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		0EB57EC91CF778AD00E30272 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EB57EC81CF778AD00E30272 /* PhotoClash.app */,
-				0EB57EDC1CF778AD00E30272 /* PhotoClashTests.xctest */,
-				0EB57EE71CF778AD00E30272 /* PhotoClashUITests.xctest */,
+				0EB57EC81CF778AD00E30272 /* photo-clash-sample.app */,
+				0EB57EDC1CF778AD00E30272 /* photo-clash-sampleTests.xctest */,
+				0EB57EE71CF778AD00E30272 /* photo-clash-sampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,8 +221,6 @@
 				0E506A901D73612600A6019E /* FriendsTableViewController.swift */,
 				0E0E109A1D627A8900A573CE /* FacebookLoginViewController.swift */,
 				0EEE6ED71D38262E00B0094E /* MainFeedViewController.swift */,
-				0E031DF21D3EE56E00EA9AE4 /* EditPhotoViewController.swift */,
-				0E031DF01D3EDF5A00EA9AE4 /* FusumaContainerViewController.swift */,
 				0EE725E41D6578A10040423F /* SearchViewController.swift */,
 				0E76590F1DABF42C00EABDB7 /* BlurrableCollectionView.swift */,
 				0E198A8D1D37E87B00F25F53 /* MyProfileViewController.swift */,
@@ -244,6 +242,7 @@
 				0E352C391D456B60005CD054 /* TextImageView.swift */,
 				0EB57ED21CF778AD00E30272 /* Assets.xcassets */,
 				0EB57ED41CF778AD00E30272 /* LaunchScreen.storyboard */,
+				0E7175DD1E1C8EA200316363 /* GoogleService-Info.plist */,
 				0EB57ED71CF778AD00E30272 /* Info.plist */,
 				0E7659111DAE9E1C00EABDB7 /* WhiteRhino.png */,
 				0ED8CF6A1D9EF16C00CBA3EF /* antelope.jpg */,
@@ -279,11 +278,15 @@
 			path = PhotoClashUITests;
 			sourceTree = "<group>";
 		};
-		54B133A8213371653274AEE6 /* Pods */ = {
+		DD7E993E95FAF06773703C8B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F055E2AA5B266559135FE9A1 /* Pods.debug.xcconfig */,
-				BA0E035FDF1FB2F157EBCA3A /* Pods.release.xcconfig */,
+				0DC1A33B7741AA60D6076E2C /* Pods-photo-clash-sample.debug.xcconfig */,
+				F8B36729D6F9681DBF079409 /* Pods-photo-clash-sample.release.xcconfig */,
+				36DC2E321546257483C72649 /* Pods-photo-clash-sampleTests.debug.xcconfig */,
+				9A16E656A6ECEFD4E3BA1517 /* Pods-photo-clash-sampleTests.release.xcconfig */,
+				F7DB7686B47654F5A5DC9295 /* Pods-photo-clash-sampleUITests.debug.xcconfig */,
+				BC2578297246E9A955B53FE8 /* Pods-photo-clash-sampleUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -291,60 +294,66 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EB57EC71CF778AD00E30272 /* PhotoClash */ = {
+		0EB57EC71CF778AD00E30272 /* photo-clash-sample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EB57EF01CF778AD00E30272 /* Build configuration list for PBXNativeTarget "PhotoClash" */;
+			buildConfigurationList = 0EB57EF01CF778AD00E30272 /* Build configuration list for PBXNativeTarget "photo-clash-sample" */;
 			buildPhases = (
-				5F10CF8C1B8D83B7BFC7A8D8 /* Check Pods Manifest.lock */,
+				6B9FD57AC921FDFB35E74839 /* [CP] Check Pods Manifest.lock */,
 				0EB57EC41CF778AD00E30272 /* Sources */,
 				0EB57EC51CF778AD00E30272 /* Frameworks */,
 				0EB57EC61CF778AD00E30272 /* Resources */,
-				3A8A180EB5B5A102EAD466FA /* Embed Pods Frameworks */,
-				5471980B88A00BFD03A7ACB9 /* Copy Pods Resources */,
+				4CCC1F034BDF0B013D2F4040 /* [CP] Embed Pods Frameworks */,
+				5DDF9C72F5096322F10A42D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PhotoClash;
+			name = "photo-clash-sample";
 			productName = PhotoClash;
-			productReference = 0EB57EC81CF778AD00E30272 /* PhotoClash.app */;
+			productReference = 0EB57EC81CF778AD00E30272 /* photo-clash-sample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0EB57EDB1CF778AD00E30272 /* PhotoClashTests */ = {
+		0EB57EDB1CF778AD00E30272 /* photo-clash-sampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EB57EF31CF778AD00E30272 /* Build configuration list for PBXNativeTarget "PhotoClashTests" */;
+			buildConfigurationList = 0EB57EF31CF778AD00E30272 /* Build configuration list for PBXNativeTarget "photo-clash-sampleTests" */;
 			buildPhases = (
+				DB04B1359EE3CAA0E7A58C5B /* [CP] Check Pods Manifest.lock */,
 				0EB57ED81CF778AD00E30272 /* Sources */,
 				0EB57ED91CF778AD00E30272 /* Frameworks */,
 				0EB57EDA1CF778AD00E30272 /* Resources */,
+				7FE7DACA3D066BE6AC3B145A /* [CP] Embed Pods Frameworks */,
+				D6A86320495B218F887F54B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0EB57EDE1CF778AD00E30272 /* PBXTargetDependency */,
 			);
-			name = PhotoClashTests;
+			name = "photo-clash-sampleTests";
 			productName = PhotoClashTests;
-			productReference = 0EB57EDC1CF778AD00E30272 /* PhotoClashTests.xctest */;
+			productReference = 0EB57EDC1CF778AD00E30272 /* photo-clash-sampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0EB57EE61CF778AD00E30272 /* PhotoClashUITests */ = {
+		0EB57EE61CF778AD00E30272 /* photo-clash-sampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EB57EF61CF778AD00E30272 /* Build configuration list for PBXNativeTarget "PhotoClashUITests" */;
+			buildConfigurationList = 0EB57EF61CF778AD00E30272 /* Build configuration list for PBXNativeTarget "photo-clash-sampleUITests" */;
 			buildPhases = (
+				11CF2507E24F2849F20D646A /* [CP] Check Pods Manifest.lock */,
 				0EB57EE31CF778AD00E30272 /* Sources */,
 				0EB57EE41CF778AD00E30272 /* Frameworks */,
 				0EB57EE51CF778AD00E30272 /* Resources */,
+				54F0B38F721912CEE8B4AF19 /* [CP] Embed Pods Frameworks */,
+				B7C9063DB66EE4588EFD8814 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0EB57EE91CF778AD00E30272 /* PBXTargetDependency */,
 			);
-			name = PhotoClashUITests;
+			name = "photo-clash-sampleUITests";
 			productName = PhotoClashUITests;
-			productReference = 0EB57EE71CF778AD00E30272 /* PhotoClashUITests.xctest */;
+			productReference = 0EB57EE71CF778AD00E30272 /* photo-clash-sampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -354,12 +363,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Cole Conte";
 				TargetAttributes = {
 					0EB57EC71CF778AD00E30272 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = Q2W63SJ2HK;
+						DevelopmentTeam = 6FJUN62T7L;
 						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -379,7 +388,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EB57EC31CF778AD00E30272 /* Build configuration list for PBXProject "PhotoClash" */;
+			buildConfigurationList = 0EB57EC31CF778AD00E30272 /* Build configuration list for PBXProject "photo-clash-sample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -392,9 +401,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EB57EC71CF778AD00E30272 /* PhotoClash */,
-				0EB57EDB1CF778AD00E30272 /* PhotoClashTests */,
-				0EB57EE61CF778AD00E30272 /* PhotoClashUITests */,
+				0EB57EC71CF778AD00E30272 /* photo-clash-sample */,
+				0EB57EDB1CF778AD00E30272 /* photo-clash-sampleTests */,
+				0EB57EE61CF778AD00E30272 /* photo-clash-sampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -419,6 +428,7 @@
 				0E3BBCC51D7616C8004F90CC /* noUser.jpg in Resources */,
 				0E321BB51D5D14F900D9E215 /* Chameleon2.png in Resources */,
 				0ED8CF6B1D9EF16C00CBA3EF /* antelope.jpg in Resources */,
+				0E7175DE1E1C8EA200316363 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7175DF1E1C8EA200316363 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,55 +444,146 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7175E01E1C8EA200316363 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A8A180EB5B5A102EAD466FA /* Embed Pods Frameworks */ = {
+		11CF2507E24F2849F20D646A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5471980B88A00BFD03A7ACB9 /* Copy Pods Resources */ = {
+		4CCC1F034BDF0B013D2F4040 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-photo-clash-sample/Pods-photo-clash-sample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F10CF8C1B8D83B7BFC7A8D8 /* Check Pods Manifest.lock */ = {
+		54F0B38F721912CEE8B4AF19 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-photo-clash-sampleUITests/Pods-photo-clash-sampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DDF9C72F5096322F10A42D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-photo-clash-sample/Pods-photo-clash-sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B9FD57AC921FDFB35E74839 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE7DACA3D066BE6AC3B145A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-photo-clash-sampleTests/Pods-photo-clash-sampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7C9063DB66EE4588EFD8814 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-photo-clash-sampleUITests/Pods-photo-clash-sampleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6A86320495B218F887F54B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-photo-clash-sampleTests/Pods-photo-clash-sampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB04B1359EE3CAA0E7A58C5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -496,10 +598,8 @@
 				0E198A8E1D37E87B00F25F53 /* MyProfileViewController.swift in Sources */,
 				0E352C341D4299F3005CD054 /* FinishedClash.swift in Sources */,
 				0EE725ED1D6CD5D60040423F /* PreviewViewController.swift in Sources */,
-				0E031DF31D3EE56E00EA9AE4 /* EditPhotoViewController.swift in Sources */,
 				0E321BC11D623E1400D9E215 /* CustomControl.swift in Sources */,
 				0E198A921D37FAB400F25F53 /* ClashpointsContainerViewController.swift in Sources */,
-				0E031DF11D3EDF5A00EA9AE4 /* FusumaContainerViewController.swift in Sources */,
 				0E198A941D37FE0600F25F53 /* MyLocationContainerViewController.swift in Sources */,
 				0E352C3A1D456B60005CD054 /* TextImageView.swift in Sources */,
 				0EBD511A1D3830480006C125 /* CurrentClashTableViewCell.swift in Sources */,
@@ -540,12 +640,12 @@
 /* Begin PBXTargetDependency section */
 		0EB57EDE1CF778AD00E30272 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EB57EC71CF778AD00E30272 /* PhotoClash */;
+			target = 0EB57EC71CF778AD00E30272 /* photo-clash-sample */;
 			targetProxy = 0EB57EDD1CF778AD00E30272 /* PBXContainerItemProxy */;
 		};
 		0EB57EE91CF778AD00E30272 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EB57EC71CF778AD00E30272 /* PhotoClash */;
+			target = 0EB57EC71CF778AD00E30272 /* photo-clash-sample */;
 			targetProxy = 0EB57EE81CF778AD00E30272 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -662,13 +762,14 @@
 		};
 		0EB57EF11CF778AD00E30272 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F055E2AA5B266559135FE9A1 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 0DC1A33B7741AA60D6076E2C /* Pods-photo-clash-sample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PhotoClash/PhotoClash.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6FJUN62T7L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -684,13 +785,14 @@
 		};
 		0EB57EF21CF778AD00E30272 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA0E035FDF1FB2F157EBCA3A /* Pods.release.xcconfig */;
+			baseConfigurationReference = F8B36729D6F9681DBF079409 /* Pods-photo-clash-sample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PhotoClash/PhotoClash.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6FJUN62T7L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -706,33 +808,39 @@
 		};
 		0EB57EF41CF778AD00E30272 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DC2E321546257483C72649 /* Pods-photo-clash-sampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PhotoClashTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conte.PhotoClashTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoClash.app/PhotoClash";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/photo-clash-sample.app/photo-clash-sample";
 			};
 			name = Debug;
 		};
 		0EB57EF51CF778AD00E30272 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A16E656A6ECEFD4E3BA1517 /* Pods-photo-clash-sampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PhotoClashTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conte.PhotoClashTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoClash.app/PhotoClash";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/photo-clash-sample.app/photo-clash-sample";
 			};
 			name = Release;
 		};
 		0EB57EF71CF778AD00E30272 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7DB7686B47654F5A5DC9295 /* Pods-photo-clash-sampleUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PhotoClashUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conte.PhotoClashUITests;
@@ -744,7 +852,9 @@
 		};
 		0EB57EF81CF778AD00E30272 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2578297246E9A955B53FE8 /* Pods-photo-clash-sampleUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PhotoClashUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conte.PhotoClashUITests;
@@ -757,7 +867,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EB57EC31CF778AD00E30272 /* Build configuration list for PBXProject "PhotoClash" */ = {
+		0EB57EC31CF778AD00E30272 /* Build configuration list for PBXProject "photo-clash-sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EB57EEE1CF778AD00E30272 /* Debug */,
@@ -766,7 +876,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EB57EF01CF778AD00E30272 /* Build configuration list for PBXNativeTarget "PhotoClash" */ = {
+		0EB57EF01CF778AD00E30272 /* Build configuration list for PBXNativeTarget "photo-clash-sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EB57EF11CF778AD00E30272 /* Debug */,
@@ -775,7 +885,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EB57EF31CF778AD00E30272 /* Build configuration list for PBXNativeTarget "PhotoClashTests" */ = {
+		0EB57EF31CF778AD00E30272 /* Build configuration list for PBXNativeTarget "photo-clash-sampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EB57EF41CF778AD00E30272 /* Debug */,
@@ -784,7 +894,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EB57EF61CF778AD00E30272 /* Build configuration list for PBXNativeTarget "PhotoClashUITests" */ = {
+		0EB57EF61CF778AD00E30272 /* Build configuration list for PBXNativeTarget "photo-clash-sampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EB57EF71CF778AD00E30272 /* Debug */,

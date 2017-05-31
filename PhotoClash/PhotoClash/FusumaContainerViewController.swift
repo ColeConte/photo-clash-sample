@@ -10,6 +10,10 @@ import Foundation
 import Fusuma
 
 class FusumaContainerViewController: UIViewController, FusumaDelegate{
+    public func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
+        //todo
+    }
+
     
     var photoToEdit: UIImage?
     var fusumaView: FusumaViewController?
