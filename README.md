@@ -1,4 +1,4 @@
-<img src="https://github.com/ColeConte/photo-clash-sample/blob/master/Chameleon.png" alt="drawing" width="400" height="400"/>
+<img src="https://github.com/ColeConte/photo-clash-sample/blob/master/Chameleon.png" style="float: center;" width="200" height="200"/>
 
 This is some sample code from a past iOS project called PhotoClash.
 The goal of the project was to provide a social platform for users in the same area to share competing photos.
