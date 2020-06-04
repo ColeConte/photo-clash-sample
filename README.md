@@ -4,4 +4,5 @@ Some of the elements included in this sample code include:
   - User profile and search
   - Integration with Facebook SDK
   - Main feed
-This project taught me a lot about the features of Swift and required me to integrate a variety of libraries.
+  
+This was a fun challenge that taught me a lot about the features of Swift and required me to integrate a variety of libraries. I also learned a lot about UI design!
